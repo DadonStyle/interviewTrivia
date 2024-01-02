@@ -3,11 +3,11 @@
     "id": 1,
     "category": "React",
     "description": "Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.",
-    "answer": "Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.",
+    "answer": "Lorem ipsum dolor sit amet",
     "wrongAnswers": [
-      "Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.",
-      "Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.",
-      "Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat."
+      "Lorem ipsum dolor sit amet",
+      "Lorem ipsum dolor sit amet",
+      "Lorem ipsum dolor sit amet"
     ]
   }
 ]
