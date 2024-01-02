@@ -1,16 +1,15 @@
-import { Question } from "../../constants/questions";
 import OptionList from "./OptionList";
+import { Question } from "../../constants/types";
 
 type Questions = {
   questions: Question[];
 };
 
-const Questionary: React.FC<Questions> = ({ questions }: Questions) => {
+const Questionary = ({ questions }: Questions) => {
   return (
     <div>
       {questions.map((question: Question) => (
         <div key={question.id}>
-          <img src={`path/to/images/${question.category}`} alt={`${question.category}`} />
           <main>
             <header>Question</header>
             <p>{question.description}</p>
