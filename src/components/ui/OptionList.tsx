@@ -16,7 +16,7 @@ const OptionList = ({ question }: OptionListProps) => {
   return (
     <ol type="A">
       {options.map((option: string) => (
-        <li key={uuid()}>{option}</li>
+        <li key={uuid()}><button>{option}</button></li>
       ))}
     </ol>
   );
