@@ -1,14 +1,17 @@
-import _ from "lodash";
+import { shuffle } from "lodash";
 import { v4 as uuid } from "uuid";
-
-import { Question } from "../../constants/questions";
+import { Question } from "../../constants/types";
 
 const prepSelection = (question: Question) => {
   const allOptions = [question.answer, ...question.wrongAnswers];
-  return _.shuffle(allOptions);
+  return shuffle(allOptions);
 };
 
-const OptionList: React.FC<{ question: Question }> = ({ question }) => {
+interface OptionListProps {
+  question: Question
+}
+
+const OptionList = ({ question }: OptionListProps) => {
   const options = prepSelection(question);
   return (
     <ol type="A">
