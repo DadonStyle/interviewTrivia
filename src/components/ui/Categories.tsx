@@ -1,18 +1,16 @@
+import { Button, Box } from "@mui/material";
+
 const categories = ["React", "Typescript", "Javascript", "Random"];
 
 const Categories = () => {
   return (
-    <div>
+    <Box>
       {categories.map((category) => {
         return (
-          <ul>
-            <li>
-              <button key={category}>{category}</button>
-            </li>
-          </ul>
+          <Button variant="contained" onClick={() => console.log("Hello")} type="button" key={category}>{category}</Button>
         );
       })}
-    </div>
+    </Box>
   );
 };
 
