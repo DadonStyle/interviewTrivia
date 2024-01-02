@@ -1,3 +1,7 @@
+import Box from "@mui/material/Box";
+import Button from "@mui/material/Button";
+import Typography from "@mui/material/Typography";
+
 import OptionList from "./OptionList";
 import { Question } from "../../constants/types";
 
@@ -7,16 +11,36 @@ type Questions = {
 
 const Questionary = ({ questions }: Questions) => {
   return (
-    <div>
+    <>
       {questions.map((question: Question) => (
-        <div key={question.id}>
-          <main>
-            <header>Question</header>
-            <p>{question.description}</p>
-          </main>
+        <Box key={question.id} sx={{ paddingTop: "20%" }}>
+          <Box sx={{
+            padding: "0 1.25rem",
+            backgroundColor: "white",
+            color: "black",
+            borderRadius: "1.25rem",
+            margin: "0 3.125rem",
+          }}>
+            <Typography sx={{ color: "#A76AE4" }} variant="h3">
+              Question
+            </Typography>
+            <Typography paragraph sx={{ padding: "0.3125rem 0.625rem" }}>
+              {question.description}
+            </Typography>
+          </Box>
           <OptionList question={question} />
-        </div>
+          <Button
+            variant="contained"
+            sx={{
+              borderRadius: "3.125rem",
+              padding: "0.5rem 2.5rem",
+              backgroundColor: "#A76AE4",
+            }}
+          >
+            next
+          </Button>
+        </Box>
       ))}
-    </div>);
+    </>);
 };
 export default Questionary;
