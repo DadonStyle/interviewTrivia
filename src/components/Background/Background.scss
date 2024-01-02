@@ -1,0 +1,26 @@
+.background-wrapper {
+  width: 100svw;
+  height: 100svh;
+  overflow: hidden;
+  position: relative;
+  background-color: #f4f2f6;
+  z-index: -101;
+  display: flex;
+  align-items: center;
+}
+
+.background-purple-area {
+  
+  position: absolute;
+  top: 0;
+  width: 100svw;
+  background-color: #a76ae4;
+  height: 450px;
+  border-bottom-left-radius: 18px;
+  border-bottom-right-radius: 18px;
+  z-index: -100;
+}
+
+.children-container {
+  background-color: transparent;
+}
