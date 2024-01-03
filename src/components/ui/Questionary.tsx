@@ -10,6 +10,8 @@ type Questions = {
 };
 
 const Questionary = ({ questions }: Questions) => {
+  // TODO: convert styles to theme
+  // TODO: move inline style to sass
   return (
     <>
       {questions.map((question: Question) => (
