@@ -21,6 +21,8 @@ const indexToAlpha = (index: number) => {
 
 const OptionList = ({ question }: OptionListProps) => {
   const options = prepSelection(question);
+  // TODO: convert styles to theme
+  // TODO: move inline style to sass
   return (
     <Box sx={{
       display: "flex",
@@ -30,13 +32,18 @@ const OptionList = ({ question }: OptionListProps) => {
     }}>
       <List>
         {options.map((option: string, index: number) => (
+          // TODO: add style to '.Mui-selected to ListItem'
           <ListItem key={crypto.randomUUID()}>
             <Button
               variant="contained"
               sx={{
                 padding: "0.625rem",
                 backgroundColor: "white",
-                color: "black"
+                color: "black",
+                ":hover": { backgroundColor: "#A25AE0", color: "white" },
+                ":active": {
+                  boxShadow: "0px 5px 5px 3px #A25AE0, 0px 8px 10px 1px #E5A2B1, 0px 3px 14px 2px #D4A1B0",
+                },
               }}
             >
               {`${indexToAlpha(index)}. ${option}`}
