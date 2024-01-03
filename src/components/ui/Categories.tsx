@@ -1,27 +1,38 @@
 import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
-import Background from "../Background/Background";
 
 const categories = ["React", "Typescript", "Javascript", "Random"];
 
 const Categories = () => {
   return (
-    <Background>
-      <Box>
-        {categories.map((category) => {
-          return (
-            <Button
-              variant="contained"
-              onClick={() => console.log("Hello")}
-              type="button"
-              key={category}
-            >
-              {category}
-            </Button>
-          );
-        })}
-      </Box>
-    </Background>
+    <Box sx={{
+      display: "flex",
+      flexDirection: "column",
+      justifyContent: "center",
+      alignItems: "center",
+      width: "100svw",
+      paddingTop: "50%",
+    }}>
+
+      {categories.map((category) => {
+        return (
+          <Button
+            variant="contained"
+            onClick={() => console.log("Hello")}
+            type="button"
+            key={category}
+            sx={{
+              padding: "0.625rem",
+              width: "40%",
+              margin: "8px 0"
+            }}
+          >
+            {category}
+          </Button>
+        );
+      })}
+
+    </Box>
   );
 };
 
