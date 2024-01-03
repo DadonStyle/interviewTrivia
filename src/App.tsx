@@ -1,16 +1,37 @@
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.css";
 
-import Questionary from "./components/ui/Questionary";
-import { Question } from "./constants/types";
-import questions from "./constants/questions.json";
 import Background from "./components/Background/Background";
+import Questionary from "./components/ui/Questionary";
+import Categories from "./components/ui/Categories";
+
+import questions from "./constants/questions.json";
+import { Question } from "./constants/types";
 
 const App = () => {
   const data: Question[] = questions;
+
   return (
-    <Background>
-      <Questionary questions={data} />
-    </Background>
+    <BrowserRouter>
+      <Routes>
+        <Route
+          path="/"
+          element={
+            <Background>
+              <Categories />
+            </Background>
+          }
+        />
+        <Route
+          path="/qa"
+          element={
+            <Background>
+              <Questionary questions={data} />
+            </Background>
+          }
+        />
+      </Routes>
+    </BrowserRouter>
   );
 };
 
