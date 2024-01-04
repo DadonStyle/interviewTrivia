@@ -1,6 +1,13 @@
 :root {
-  --dark-text-color: white;
-  --light-text-color: #282829grey;
+  --light-text: hsl(227,79%, 27%,1);
+  --light-bg: hsla(208, 92%, 92%, 1);
+  --light-secondary-bg: hsla(208, 56%, 77%, 1);
+  --light-accent: hsla(227, 57%, 65%, 1);
+
+  --dark-text: hsla(0, 0%, 100%, 1);
+  --dark-bg: hsla(208, 100%, 11%, 1);
+  --dark-secondary-bg: hsla(208, 100%, 20%, 1);
+  --dark-accent: hsla(227, 37%, 40%, 1);
 
   --error-500: #f04438;
   --error-600: #d92d20;

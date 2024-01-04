@@ -1,0 +1,14 @@
+.category-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 100svw;
+      padding-top: 50%;
+}
+
+.category-button {
+      padding: 0.625rem;
+      width: 40%;
+      margin: 8px 0;
+}
