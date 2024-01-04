@@ -12,26 +12,14 @@ const App = () => {
   const data: Question[] = questions;
 
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route
-          path="/"
-          element={
-            <Background>
-              <Categories />
-            </Background>
-          }
-        />
-        <Route
-          path="/qa"
-          element={
-            <Background>
-              <Questionary questions={data} />
-            </Background>
-          }
-        />
-      </Routes>
-    </BrowserRouter>
+    <Background imgSrc="https://picsum.photos/200">
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Categories />} />
+          <Route path="/qa" element={<Questionary questions={data} />} />
+        </Routes>
+      </BrowserRouter>
+    </Background>
   );
 };
 

@@ -3,17 +3,16 @@
   height: 100svh;
   overflow: hidden;
   position: relative;
-  background-color: #f4f2f6;
+  background-color: inherit;
   display: flex;
   align-items: center;
 }
 
-.background-purple-area {
-  
+.background-top-area {
   position: absolute;
   top: 0;
   width: 100svw;
-  background-color: #a76ae4;
+  background-color: #a2c5e4;
   height: 450px;
   border-bottom-left-radius: 18px;
   border-bottom-right-radius: 18px;
@@ -23,4 +22,37 @@
 .children-container {
   background-color: transparent;
   z-index: 1;
+}
+
+.background-circle-item {
+  position: absolute;
+  &:nth-child(1) {
+    top: 0.5rem;
+    left: -1rem;
+  }
+  &:nth-child(2) {
+    top: -25%;
+    left: 40%;
+  }
+  &:nth-child(3) {
+    top: -10%;
+    right: -10%;
+  }
+  &:nth-child(4) {
+    top: 16%;
+    right: 16%;
+  }
+  &:nth-child(5) {
+    top: 35%;
+    right: -32%;
+  }
+  &:nth-child(6) {
+    top: 70%;
+    left: -6%;
+  }
+}
+
+.background-logo {
+  width: 90px;
+  height: 90px;
 }
