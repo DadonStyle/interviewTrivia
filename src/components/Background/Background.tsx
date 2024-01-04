@@ -7,6 +7,7 @@ interface BackgroundProps extends PropsWithChildren {
 }
 
 const Background = ({ children, imgSrc }: BackgroundProps) => {
+  console.log(imgSrc);
   return (
     <div className="background-wrapper">
       <div className="background-top-area">

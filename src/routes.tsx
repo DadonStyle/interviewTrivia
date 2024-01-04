@@ -1,5 +1,4 @@
 import { Routes, Route } from "react-router-dom";
-import Background from "./components/Background/Background";
 import Questionary from "./components/ui/Questionary";
 import Categories from "./components/ui/Categories";
 import questions from "./constants/questions.json";
@@ -9,22 +8,8 @@ const AppRoutes = () => {
   const data: Question[] = questions;
   return (
     <Routes>
-      <Route
-        path="/"
-        element={
-          <Background>
-            <Categories />
-          </Background>
-        }
-      />
-      <Route
-        path="/qa"
-        element={
-          <Background>
-            <Questionary questions={data} />
-          </Background>
-        }
-      />
+      <Route path="/" element={<Categories />} />
+      <Route path="/qa" element={<Questionary questions={data} />} />
     </Routes>
   );
 };
