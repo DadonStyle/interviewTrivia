@@ -1,12 +1,15 @@
 import { BrowserRouter } from "react-router-dom";
 import AppRoutes from "./routes";
+import Background from "./components/Background/Background";
 import "./App.css";
 
 const App = () => {
   return (
-    <BrowserRouter>
-      <AppRoutes />
-    </BrowserRouter>
+    <Background imgSrc="https://picsum.photos/200">
+      <BrowserRouter>
+        <AppRoutes />
+      </BrowserRouter>
+    </Background>
   );
 };
 
