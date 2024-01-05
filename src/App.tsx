@@ -1,5 +1,5 @@
 import { BrowserRouter } from "react-router-dom";
-import AppRoutes from "./routes";
+import AppRoutes from "./routes/AppRoutes";
 import Background from "./components/Background/Background";
 import "./App.css";
 
