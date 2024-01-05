@@ -13,7 +13,7 @@ export const getQuestions = () => {
       return allQuestions.react;
     case "typescript":
       return allQuestions.typescript;
-    case "javscript":
+    case "javascript":
       return allQuestions.javascript;
     default:
       return [];
