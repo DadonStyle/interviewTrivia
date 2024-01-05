@@ -1,0 +1,40 @@
+.questionary-container {
+    padding: 0 1.25rem;
+    background-color: white;
+    color: black;
+    border-radius: 1.25rem;
+    margin: 0 3.125rem;
+}
+
+.questionary-button {
+    border-radius: 3.125rem;
+    padding: 0.5rem 2.5rem;
+    background-color: #A76AE4;
+}
+
+.questionary-paragraph {
+  padding: 0.3125rem 0.625rem; 
+}
+
+.option-list-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.option-list-button {
+  padding: 0.625rem;
+  background-color: white;
+  color: black;
+  border: none;
+  outline: none;
+
+  &:hover {
+    background-color: #A25AE0;
+    color: white;
+  }
+  &:active {
+    box-shadow: 0px 5px 5px 3px #A25AE0, 0px 8px 10px 1px #E5A2B1, 0px 3px 14px 2px #D4A1B0;
+  }
+}
