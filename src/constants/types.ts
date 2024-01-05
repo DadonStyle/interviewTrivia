@@ -1,4 +1,4 @@
-export type Question = {
+export type QuestionType = {
   id: number;
   category: string;
   description: string;
