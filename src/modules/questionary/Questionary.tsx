@@ -20,7 +20,7 @@ const Questionary = () => {
   );
 
   const onOptionSelect = (selectedOption: string) => {
-    if (cache.length > questions.length) {
+    if (cache.length >= questions.length) {
       navigate("/review");
     }
 
@@ -36,7 +36,6 @@ const Questionary = () => {
     }
 
     setCache([...cache, index]);
-    setRandomQuestion(questions[randomIndex(questions)]);
     setRandomQuestion(questions[index]);
   };
 
