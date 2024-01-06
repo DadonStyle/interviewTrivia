@@ -11,7 +11,7 @@ interface AppRouteProps {
 }
 
 const AppRoute = ({ children }: AppRouteProps) => {
-  const { category } = useParams();
+  const { category } = useParams<string>();
   const handleImg = () => {
     if (category?.toLocaleLowerCase() === "react") return reactSvg;
     if (category?.toLocaleLowerCase() === "javascript") return jsSvg;
