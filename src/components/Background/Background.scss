@@ -6,6 +6,7 @@
   background-color: inherit;
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 
 .background-top-area {
@@ -23,6 +24,8 @@
   background-color: transparent;
   z-index: 1;
   padding: 0 1rem;
+  align-self: self-end;
+  margin-bottom: 1rem;
 }
 
 .background-circle-item {
