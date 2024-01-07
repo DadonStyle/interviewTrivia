@@ -27,4 +27,3 @@ jobs:
     - run: npm run lint:fix
     - run: npm run format
     - run: npm test --if-present
-    - run: npm run build

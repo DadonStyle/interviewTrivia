@@ -1,0 +1,48 @@
+.circle {
+  border-radius: 50%;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.size52 {
+  width: 52px;
+  height: 52px;
+}
+
+.size110 {
+  width: 110px;
+  height: 110px;
+}
+
+.size150 {
+  width: 150px;
+  height: 150px;
+}
+
+.size200 {
+  width: 200px;
+  height: 200px;
+}
+
+.size250 {
+  width: 250px;
+  height: 250px;
+}
+
+.circleLightBlue {
+  background-color: rgba(113, 136, 216, 0.36);
+}
+
+.darkCircleLightBlue {
+  background-color: rgba(0, 53, 100, 1);
+}
+
+.innerBlue {
+  background-color: rgba(113, 136, 216, 1);
+}
+
+.white {
+  background-color: rgba(255, 255, 255, 1);
+}

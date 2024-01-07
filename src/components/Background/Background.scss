@@ -1,0 +1,86 @@
+.background-wrapper {
+  width: 100svw;
+  height: 100svh;
+  overflow: hidden;
+  position: relative;
+  background-color: inherit;
+  display: flex;
+  align-items: center;
+}
+
+.background-top-area {
+  position: absolute;
+  top: 0;
+  width: 100svw;
+  background-color: #a2c5e4;
+  height: 450px;
+  border-bottom-left-radius: 18px;
+  border-bottom-right-radius: 18px;
+  z-index: 1;
+}
+
+.children-container {
+  background-color: transparent;
+  z-index: 1;
+  padding: 0 1rem;
+}
+
+.background-circle-item {
+  position: absolute;
+  animation: float 3s ease-in-out infinite;
+
+  &:nth-child(1) {
+    top: 0.5rem;
+    left: -1rem;
+    animation-delay: 0.5s;
+  }
+
+  &:nth-child(2) {
+    top: -25%;
+    left: 40%;
+    animation-delay: 1s;
+  }
+
+  &:nth-child(3) {
+    top: -10%;
+    right: -10%;
+    animation-delay: 1.5s;
+  }
+
+  &:nth-child(4) {
+    top: 16%;
+    right: 16%;
+    animation-delay: 1.7s;
+  }
+
+  &:nth-child(5) {
+    top: 35%;
+    right: -32%;
+    animation-delay: 2s;
+  }
+
+  &:nth-child(6) {
+    top: 70%;
+    left: -6%;
+    animation-delay: 3s;
+  }
+}
+
+.background-logo {
+  width: 90px;
+  height: 90px;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}

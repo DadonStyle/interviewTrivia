@@ -1,0 +1,332 @@
+[
+  {
+    "id": 1,
+    "category": "TypeScript",
+    "description": "What is TypeScript?",
+    "answer": "TypeScript is a superset of JavaScript that adds static typing to the language, enabling better tooling, error checking, and code scalability.",
+    "wrongAnswers": [
+      "TypeScript is a replacement for JavaScript.",
+      "TypeScript is less flexible than JavaScript.",
+      "TypeScript doesn't support any JavaScript features."
+    ]
+  },
+  {
+    "id": 2,
+    "category": "TypeScript",
+    "description": "What are the key benefits of using TypeScript?",
+    "answer": "Benefits of TypeScript include type checking, improved tooling, easier code maintenance, and enhanced scalability.",
+    "wrongAnswers": [
+      "TypeScript provides no additional benefits over JavaScript.",
+      "TypeScript slows down the development process.",
+      "TypeScript doesn't support modern JavaScript features."
+    ]
+  },
+  {
+    "id": 3,
+    "category": "TypeScript",
+    "description": "What is a type in TypeScript?",
+    "answer": "A type in TypeScript defines the shape of data, specifying what kind of values a variable can hold.",
+    "wrongAnswers": [
+      "Types in TypeScript are optional and don't affect the code.",
+      "Typescript doesn't support defining different types.",
+      "Types in TypeScript are exclusively used for documentation."
+    ]
+  },
+  {
+    "id": 4,
+    "category": "TypeScript",
+    "description": "What is the difference between 'interface' and 'type' in TypeScript?",
+    "answer": "'interface' allows defining shapes/structures while 'type' can create aliases for primitive types, unions, and intersections.",
+    "wrongAnswers": [
+      "'interface' and 'type' serve the same purpose in TypeScript.",
+      "'interface' is used for primitive types, and 'type' for shapes/structures.",
+      "There's no distinction between 'interface' and 'type' in TypeScript."
+    ]
+  },
+  {
+    "id": 5,
+    "category": "TypeScript",
+    "description": "Explain the concept of 'type inference' in TypeScript.",
+    "answer": "'Type inference' is TypeScript's ability to automatically determine the type of a variable based on its initialization.",
+    "wrongAnswers": [
+      "'Type inference' is a manual process in TypeScript.",
+      "TypeScript doesn't support 'type inference'.",
+      "'Type inference' only works with explicit type annotations."
+    ]
+  },
+  {
+    "id": 6,
+    "category": "TypeScript",
+    "description": "What are the different access modifiers available in TypeScript?",
+    "answer": "Access modifiers like 'public', 'private', and 'protected' determine the accessibility of class members.",
+    "wrongAnswers": [
+      "TypeScript doesn't support access modifiers.",
+      "All class members in TypeScript are public by default.",
+      "Access modifiers only apply to functions in TypeScript."
+    ]
+  },
+  {
+    "id": 7,
+    "category": "TypeScript",
+    "description": "What are generics in TypeScript?",
+    "answer": "Generics allow creating reusable components that can work with different data types without sacrificing type safety.",
+    "wrongAnswers": [
+      "Generics restrict the flexibility of components in TypeScript.",
+      "Generics are specific to TypeScript classes only.",
+      "Generics are solely used for documentation purposes."
+    ]
+  },
+  {
+    "id": 8,
+    "category": "TypeScript",
+    "description": "Explain the role of 'tsconfig.json' in TypeScript.",
+    "answer": "'tsconfig.json' is a configuration file used to specify compiler options, project settings, and file inclusion/exclusion for TypeScript projects.",
+    "wrongAnswers": [
+      "'tsconfig.json' is optional and has no impact on TypeScript projects.",
+      "There's no need for a configuration file in TypeScript.",
+      "Compiler options in 'tsconfig.json' cannot be modified."
+    ]
+  },
+  {
+    "id": 9,
+    "category": "TypeScript",
+    "description": "What are union and intersection types in TypeScript?",
+    "answer": "Union types allow declaring a variable to hold values of multiple types, while intersection types combine multiple types into a single type.",
+    "wrongAnswers": [
+      "Union and intersection types are not supported in TypeScript.",
+      "Union types can hold only one type of value.",
+      "Intersection types are identical to union types in TypeScript."
+    ]
+  },
+  {
+    "id": 10,
+    "category": "TypeScript",
+    "description": "What is 'strict' mode in TypeScript?",
+    "answer": "'strict' mode enables a set of strict type checking options in TypeScript, enhancing code quality and reducing potential errors.",
+    "wrongAnswers": [
+      "'strict' mode in TypeScript restricts writing code altogether.",
+      "'strict' mode doesn't affect type checking.",
+      "There's no 'strict' mode in TypeScript."
+    ]
+  },
+  {
+    "id": 11,
+    "category": "TypeScript",
+    "description": "What is the purpose of the 'never' type in TypeScript?",
+    "answer": "The 'never' type represents values that never occur, typically used for functions that never return or always throw errors.",
+    "wrongAnswers": [
+      "The 'never' type can hold any value in TypeScript.",
+      "The 'never' type is used for values that always occur.",
+      "There's no such thing as the 'never' type in TypeScript."
+    ]
+  },
+  {
+    "id": 12,
+    "category": "TypeScript",
+    "description": "Explain the concept of 'strictNullChecks' in TypeScript.",
+    "answer": "'strictNullChecks' is a TypeScript compiler option that ensures null and undefined values are handled more rigorously by the type system.",
+    "wrongAnswers": [
+      "'strictNullChecks' doesn't affect the handling of null and undefined values.",
+      "The 'strictNullChecks' option is not available in TypeScript.",
+      "'strictNullChecks' only allows null values, not undefined."
+    ]
+  },
+  {
+    "id": 13,
+    "category": "TypeScript",
+    "description": "What is a 'declaration file' in TypeScript?",
+    "answer": "A 'declaration file' (.d.ts) in TypeScript provides type information about code written in JavaScript, enabling TypeScript to understand and type-check external libraries or modules.",
+    "wrongAnswers": [
+      "Declaration files in TypeScript are used for code execution.",
+      "There's no need for declaration files in TypeScript.",
+      "Declaration files are only used for documenting TypeScript code."
+    ]
+  },
+  {
+    "id": 14,
+    "category": "TypeScript",
+    "description": "What is 'type assertion' in TypeScript?",
+    "answer": "'Type assertion' is a way to tell the TypeScript compiler about the type of a variable when the type inference cannot infer it automatically.",
+    "wrongAnswers": [
+      "'Type assertion' is mandatory for all variable declarations in TypeScript.",
+      "TypeScript doesn't support 'type assertion'.",
+      "'Type assertion' is used only for primitive data types."
+    ]
+  },
+  {
+    "id": 15,
+    "category": "TypeScript",
+    "description": "What are 'decorators' in TypeScript?",
+    "answer": "'Decorators' are a TypeScript feature used to add metadata to classes, methods, or properties, enabling additional functionality or behavior modification.",
+    "wrongAnswers": [
+      "'Decorators' are solely used for styling in TypeScript.",
+      "There's no concept of 'decorators' in TypeScript.",
+      "'Decorators' can only be applied to variables."
+    ]
+  },
+  {
+    "id": 16,
+    "category": "TypeScript",
+    "description": "What is 'tuple' in TypeScript?",
+    "answer": "A 'tuple' in TypeScript is a fixed-size array where each element has a specific type, allowing precise control over the types and lengths of arrays.",
+    "wrongAnswers": [
+      "'Tuple' in TypeScript is similar to 'array'.",
+      "'Tuple' allows dynamic resizing of elements.",
+      "There's no concept of 'tuple' in TypeScript."
+    ]
+  },
+  {
+    "id": 17,
+    "category": "TypeScript",
+    "description": "Explain the 'readonly' modifier in TypeScript.",
+    "answer": "The 'readonly' modifier in TypeScript ensures that a property can only be assigned a value at the time of declaration or in the constructor.",
+    "wrongAnswers": [
+      "'readonly' modifier allows changing the property value after initialization.",
+      "'readonly' modifier is used to make properties inaccessible.",
+      "There's no 'readonly' modifier in TypeScript."
+    ]
+  },
+  {
+    "id": 18,
+    "category": "TypeScript",
+    "description": "What are namespaces in TypeScript?",
+    "answer": "Namespaces in TypeScript group related code under a unique identifier, preventing naming conflicts and organizing code into logical units.",
+    "wrongAnswers": [
+      "Namespaces in TypeScript are similar to classes.",
+      "Namespaces in TypeScript cause naming conflicts.",
+      "There's no concept of 'namespaces' in TypeScript."
+    ]
+  },
+  {
+    "id": 19,
+    "category": "TypeScript",
+    "description": "What is the 'keyof' operator in TypeScript?",
+    "answer": "The 'keyof' operator in TypeScript retrieves the keys or property names of a given object type.",
+    "wrongAnswers": [
+      "The 'keyof' operator in TypeScript is used for arithmetic operations.",
+      "'keyof' operator cannot be used with object types.",
+      "There's no 'keyof' operator in TypeScript."
+    ]
+  },
+  {
+    "id": 20,
+    "category": "TypeScript",
+    "description": "Explain 'abstract classes' in TypeScript.",
+    "answer": "'Abstract classes' in TypeScript are classes that cannot be instantiated directly but can be used as base classes for other classes by providing common functionality.",
+    "wrongAnswers": [
+      "Abstract classes in TypeScript are instantiated directly.",
+      "Abstract classes in TypeScript cannot have any methods.",
+      "There's no concept of 'abstract classes' in TypeScript."
+    ]
+  },
+  {
+    "id": 21,
+    "category": "TypeScript",
+    "description": "What is 'mapped types' in TypeScript?",
+    "answer": "'Mapped types' in TypeScript allow the creation of new types by transforming properties in an existing type based on specific rules.",
+    "wrongAnswers": [
+      "'Mapped types' in TypeScript only work with primitive types.",
+      "'Mapped types' in TypeScript can't modify existing types.",
+      "There's no 'mapped types' concept in TypeScript."
+    ]
+  },
+  {
+    "id": 22,
+    "category": "TypeScript",
+    "description": "Explain 'conditional types' in TypeScript.",
+    "answer": "'Conditional types' in TypeScript enable creating types that depend on conditional checks or constraints.",
+    "wrongAnswers": [
+      "'Conditional types' in TypeScript are only used for boolean operations.",
+      "'Conditional types' in TypeScript cannot depend on type checks.",
+      "There's no concept of 'conditional types' in TypeScript."
+    ]
+  },
+  {
+    "id": 23,
+    "category": "TypeScript",
+    "description": "What is 'module augmentation' in TypeScript?",
+    "answer": "'Module augmentation' in TypeScript allows extending existing modules/types with additional properties or methods.",
+    "wrongAnswers": [
+      "'Module augmentation' in TypeScript is used for reducing module functionality.",
+      "'Module augmentation' in TypeScript cannot modify existing modules/types.",
+      "There's no concept of 'module augmentation' in TypeScript."
+    ]
+  },
+  {
+    "id": 24,
+    "category": "TypeScript",
+    "description": "Explain the 'unknown' type in TypeScript.",
+    "answer": "The 'unknown' type in TypeScript represents a type-safe counterpart of 'any', ensuring type safety by requiring type checks before performing operations on values of this type.",
+    "wrongAnswers": [
+      "The 'unknown' type in TypeScript is identical to 'any'.",
+      "The 'unknown' type in TypeScript doesn't enforce type checks.",
+      "There's no 'unknown' type in TypeScript."
+    ]
+  },
+  {
+    "id": 25,
+    "category": "TypeScript",
+    "description": "What is 'enum' in TypeScript?",
+    "answer": "'Enum' in TypeScript is a way to create a group of named constants that can be numeric or string-based.",
+    "wrongAnswers": [
+      "'Enum' in TypeScript can hold multiple types of values.",
+      "'Enum' in TypeScript is similar to 'object'.",
+      "There's no concept of 'enum' in TypeScript."
+    ]
+  },
+  {
+    "id": 26,
+    "category": "TypeScript",
+    "description": "Explain 'type guards' in TypeScript.",
+    "answer": "'Type guards' in TypeScript are techniques used to narrow down the type of a variable within a certain block of code, providing more specific type information to the compiler.",
+    "wrongAnswers": [
+      "'Type guards' in TypeScript always widen the type of a variable.",
+      "'Type guards' in TypeScript are only applicable to primitive types.",
+      "There's no concept of 'type guards' in TypeScript."
+    ]
+  },
+  {
+    "id": 27,
+    "category": "TypeScript",
+    "description": "What is the 'as' keyword used for in TypeScript?",
+    "answer": "The 'as' keyword in TypeScript is used for type assertions, allowing explicit casting of a variable to a specified type.",
+    "wrongAnswers": [
+      "The 'as' keyword in TypeScript is used for arithmetic operations.",
+      "The 'as' keyword in TypeScript is exclusively used with numbers.",
+      "There's no 'as' keyword in TypeScript."
+    ]
+  },
+  {
+    "id": 28,
+    "category": "TypeScript",
+    "description": "Explain 'intersection types' in TypeScript.",
+    "answer": "'Intersection types' in TypeScript allow combining multiple types into a single type that has all the features of each type.",
+    "wrongAnswers": [
+      "'Intersection types' in TypeScript only work with primitive types.",
+      "'Intersection types' in TypeScript result in losing type information.",
+      "There's no concept of 'intersection types' in TypeScript."
+    ]
+  },
+  {
+    "id": 29,
+    "category": "TypeScript",
+    "description": "What are 'template literal types' in TypeScript?",
+    "answer": "'Template literal types' in TypeScript allow creating types by using template literal syntax to represent string literal types.",
+    "wrongAnswers": [
+      "'Template literal types' in TypeScript can't represent string literal types.",
+      "'Template literal types' in TypeScript are similar to regular expressions.",
+      "There's no concept of 'template literal types' in TypeScript."
+    ]
+  },
+  {
+    "id": 30,
+    "category": "TypeScript",
+    "description": "Explain 'indexed access types' in TypeScript.",
+    "answer": "'Indexed access types' in TypeScript allow accessing the type of a specific property in a type by using a key.",
+    "wrongAnswers": [
+      "'Indexed access types' in TypeScript can access any property in a type.",
+      "'Indexed access types' in TypeScript are limited to object types only.",
+      "There's no concept of 'indexed access types' in TypeScript."
+    ]
+  }
+]
