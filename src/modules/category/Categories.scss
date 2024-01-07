@@ -1,14 +1,15 @@
-body .category-container {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      width: 100svw;
-      padding-top: 50%;
-}
+.category-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100svw;
+  padding-top: 12.5rem;
+  gap: 20px;
 
-body .category-button {
-      padding: 0.625rem;
-      width: 40%;
-      margin: 8px 0;
+  .category-button {
+    padding: 0.625rem;
+    width: 20rem;
+    height: 5rem;
+    margin: 10px;
+  }
 }
