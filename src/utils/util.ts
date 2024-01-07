@@ -2,15 +2,18 @@ import { useParams } from "react-router-dom";
 import { QuestionType } from "../constants/types";
 import allQuestions from "../constants/questions";
 
+const asciiCapitalConverter = 65;
+
 export const randomVal = (maxVal: number) => Math.floor(Math.random() * maxVal);
 export const randomIndex = (array: any) => randomVal(array.length);
-export const indexToAlpha = (index: number) => String.fromCharCode(65 + index);
-export const shuffle = (array: any) => array.sort(() => Math.random() - 0.5);
-export const getQuestions = () => {
+export const indexToAlpha = (index: number) => String.fromCharCode(asciiCapitalConverter + index);
+export const shuffle: any = (array: any) => array.sort(() => Math.random() - 0.5);
+
+export const getShuffledQuestions = () => {
   const { category } = useParams<string>();
-  if (category?.toLocaleLowerCase() === "react") return allQuestions.react;
-  if (category?.toLocaleLowerCase() === "javascript") return allQuestions.typescript;
-  if (category?.toLocaleLowerCase() === "typescript") return allQuestions.javascript;
+  if (category?.toLocaleLowerCase() === "react") return shuffle(allQuestions.react);
+  if (category?.toLocaleLowerCase() === "javascript") return shuffle(allQuestions.typescript);
+  if (category?.toLocaleLowerCase() === "typescript") return shuffle(allQuestions.javascript);
   return [];
 };
 
