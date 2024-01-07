@@ -1,57 +1,332 @@
 [
   {
     "id": 1,
-    "category": "Javascript",
-    "description": "Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.",
-    "answer": "Lorem ipsum dolor sit amet",
+    "category": "JavaScript",
+    "description": "What is JavaScript?",
+    "answer": "JavaScript is a scripting language used for creating interactive and dynamic web content.",
     "wrongAnswers": [
-      "Lorem ipsum dolor sit amet",
-      "Lorem ipsum dolor sit amet",
-      "Lorem ipsum dolor sit amet"
+      "JavaScript is a server-side programming language.",
+      "JavaScript is used only for styling web pages.",
+      "JavaScript is not supported by web browsers."
     ]
   },
   {
     "id": 2,
-    "category": "Javascript",
-    "description": "Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.",
-    "answer": "Lorem ipsum dolor sit amet",
+    "category": "JavaScript",
+    "description": "What are the differences between 'let', 'const', and 'var' in JavaScript?",
+    "answer": "'let' and 'const' are block-scoped whereas 'var' is function-scoped. 'const' declares a constant value that cannot be reassigned, while 'let' and 'var' can be reassigned.",
     "wrongAnswers": [
-      "Lorem ipsum dolor sit amet",
-      "Lorem ipsum dolor sit amet",
-      "Lorem ipsum dolor sit amet"
+      "'let' and 'const' are used for defining functions.",
+      "'let', 'const', and 'var' are interchangeable in JavaScript.",
+      "'var' is block-scoped."
     ]
   },
   {
     "id": 3,
-    "category": "Javascript",
-    "description": "Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.",
-    "answer": "Lorem ipsum dolor sit amet",
+    "category": "JavaScript",
+    "description": "What is the difference between '=='' and '===' in JavaScript?",
+    "answer": "'==' checks for equality after type coercion, while '===' checks for equality without type coercion (strict equality).",
     "wrongAnswers": [
-      "Lorem ipsum dolor sit amet",
-      "Lorem ipsum dolor sit amet",
-      "Lorem ipsum dolor sit amet"
+      "'==' and '===' are interchangeable.",
+      "'==' and '===' perform the same operations.",
+      "'===' performs type coercion."
     ]
   },
   {
     "id": 4,
-    "category": "Javascript",
-    "description": "Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.",
-    "answer": "Lorem ipsum dolor sit amet",
+    "category": "JavaScript",
+    "description": "Explain the concept of closures in JavaScript.",
+    "answer": "Closures are functions that have access to their own scope, as well as the scope in which they were created.",
     "wrongAnswers": [
-      "Lorem ipsum dolor sit amet",
-      "Lorem ipsum dolor sit amet",
-      "Lorem ipsum dolor sit amet"
+      "Closures are only used for arithmetic operations.",
+      "Closures are not supported in JavaScript.",
+      "Closures cannot access variables from their parent scope."
     ]
   },
   {
     "id": 5,
-    "category": "Javascript",
-    "description": "Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.",
-    "answer": "Lorem ipsum dolor sit amet",
+    "category": "JavaScript",
+    "description": "What are arrow functions in JavaScript?",
+    "answer": "Arrow functions are a shorter syntax for writing function expressions and have a lexically scoped 'this'.",
     "wrongAnswers": [
-      "Lorem ipsum dolor sit amet",
-      "Lorem ipsum dolor sit amet",
-      "Lorem ipsum dolor sit amet"
+      "Arrow functions cannot have parameters.",
+      "Arrow functions have a dynamic 'this'.",
+      "Arrow functions are only supported in Node.js."
+    ]
+  },
+  {
+    "id": 6,
+    "category": "JavaScript",
+    "description": "What is the purpose of 'use strict' in JavaScript?",
+    "answer": "'use strict' is a directive that enables strict mode, which catches common coding mistakes and prohibits some unsafe actions.",
+    "wrongAnswers": [
+      "'use strict' is used for defining variables.",
+      "'use strict' is not supported in modern browsers.",
+      "'use strict' allows sloppy coding practices."
+    ]
+  },
+  {
+    "id": 7,
+    "category": "JavaScript",
+    "description": "Explain the difference between 'null' and 'undefined' in JavaScript.",
+    "answer": "'null' represents an intentional absence of any object value, while 'undefined' represents a variable that has been declared but has not been assigned a value.",
+    "wrongAnswers": [
+      "'null' and 'undefined' are identical.",
+      "'null' and 'undefined' are used interchangeably.",
+      "'undefined' represents an intentional absence of a value."
+    ]
+  },
+  {
+    "id": 8,
+    "category": "JavaScript",
+    "description": "What is the purpose of the 'this' keyword in JavaScript?",
+    "answer": "The 'this' keyword refers to the object it belongs to, or the context in which it is used.",
+    "wrongAnswers": [
+      "'this' is used for defining functions.",
+      "'this' always refers to the global object.",
+      "'this' is not supported in JavaScript."
+    ]
+  },
+  {
+    "id": 9,
+    "category": "JavaScript",
+    "description": "Explain event bubbling and event capturing in JavaScript.",
+    "answer": "Event bubbling is the process where an event triggered on the innermost element is propagated up to its parent elements. Event capturing is the opposite, where the event is captured at the outermost element and then propagated down to the target element.",
+    "wrongAnswers": [
+      "Event bubbling and event capturing are the same.",
+      "Event bubbling and event capturing do not exist in JavaScript.",
+      "Event bubbling only occurs in React applications."
+    ]
+  },
+  {
+    "id": 10,
+    "category": "JavaScript",
+    "description": "What are the differences between 'setTimeout' and 'setInterval' in JavaScript?",
+    "answer": "'setTimeout' executes a function once after a specified delay, while 'setInterval' repeatedly executes a function at specified intervals until it is cleared.",
+    "wrongAnswers": [
+      "'setTimeout' and 'setInterval' perform the same operation.",
+      "'setTimeout' cannot execute functions.",
+      "'setInterval' only executes a function once."
+    ]
+  },
+  {
+    "id": 11,
+    "category": "JavaScript",
+    "description": "What is the role of 'localStorage' and 'sessionStorage' in JavaScript?",
+    "answer": "'localStorage' and 'sessionStorage' are Web Storage APIs that allow data to be stored and retrieved in the browser. 'localStorage' persists data even after the browser is closed, while 'sessionStorage' stores data for the duration of the page session.",
+    "wrongAnswers": [
+      "'localStorage' and 'sessionStorage' are used for server-side storage.",
+      "'localStorage' and 'sessionStorage' are obsolete in modern browsers.",
+      "'localStorage' and 'sessionStorage' are identical in functionality."
+    ]
+  },
+  {
+    "id": 12,
+    "category": "JavaScript",
+    "description": "What are JavaScript promises?",
+    "answer": "Promises are objects used to handle asynchronous operations in JavaScript. They represent a future value or error that will be available at some point.",
+    "wrongAnswers": [
+      "Promises are only used for synchronous operations.",
+      "Promises are not supported in JavaScript.",
+      "Promises can handle only a single asynchronous operation."
+    ]
+  },
+  {
+    "id": 13,
+    "category": "JavaScript",
+    "description": "What is the purpose of the 'map' method in JavaScript?",
+    "answer": "The 'map' method creates a new array by applying a function to each element of an existing array.",
+    "wrongAnswers": [
+      "The 'map' method modifies the original array.",
+      "The 'map' method cannot iterate over arrays.",
+      "The 'map' method only works on strings."
+    ]
+  },
+  {
+    "id": 14,
+    "category": "JavaScript",
+    "description": "Explain the concept of callback functions in JavaScript.",
+    "answer": "Callback functions are functions passed as arguments to other functions and are executed after the completion of a particular task.",
+    "wrongAnswers": [
+      "Callback functions are executed before any other code.",
+      "Callback functions can only be used in arrow functions.",
+      "Callback functions are not supported in JavaScript."
+    ]
+  },
+  {
+    "id": 15,
+    "category": "JavaScript",
+    "description": "What is object destructuring in JavaScript?",
+    "answer": "Object destructuring is a convenient way to extract multiple values from an object and assign them to variables in a single statement.",
+    "wrongAnswers": [
+      "Object destructuring is used for creating new objects.",
+      "Object destructuring works only with arrays.",
+      "Object destructuring cannot be used in function parameters."
+    ]
+  },
+  {
+    "id": 16,
+    "category": "JavaScript",
+    "description": "What is the difference between '==' and '===' operators in JavaScript?",
+    "answer": "'==' performs type coercion before comparison, while '===' compares both value and type without coercion.",
+    "wrongAnswers": [
+      "'==' and '===' operators produce the same result.",
+      "'==' operator only compares values, ignoring types.",
+      "'===' operator performs type coercion."
+    ]
+  },
+  {
+    "id": 17,
+    "category": "JavaScript",
+    "description": "Explain the concept of hoisting in JavaScript.",
+    "answer": "Hoisting is a JavaScript mechanism where variables and function declarations are moved to the top of their containing scope during the compilation phase.",
+    "wrongAnswers": [
+      "Hoisting occurs only in functions.",
+      "Hoisting does not affect function declarations.",
+      "Hoisting is similar to variable assignment."
+    ]
+  },
+  {
+    "id": 18,
+    "category": "JavaScript",
+    "description": "What are the different data types in JavaScript?",
+    "answer": "JavaScript has primitive data types such as string, number, boolean, null, undefined, and object and also supports symbol and BigInt as newer additions.",
+    "wrongAnswers": [
+      "JavaScript supports only three data types.",
+      "Data types in JavaScript cannot be categorized.",
+      "Primitive data types in JavaScript do not include 'null' and 'undefined'."
+    ]
+  },
+  {
+    "id": 19,
+    "category": "JavaScript",
+    "description": "Explain the concept of 'this' keyword in JavaScript.",
+    "answer": "The 'this' keyword refers to the object it belongs to or the context in which it is used. It can change based on how a function is called.",
+    "wrongAnswers": [
+      "'this' keyword always refers to the global object.",
+      "'this' keyword is used for declaring functions.",
+      "'this' keyword is specific to arrow functions."
+    ]
+  },
+  {
+    "id": 20,
+    "category": "JavaScript",
+    "description": "What is event delegation in JavaScript?",
+    "answer": "Event delegation is a technique where a single event listener is attached to a parent element to handle events on its child elements.",
+    "wrongAnswers": [
+      "Event delegation can only be used with mouse events.",
+      "Event delegation requires a separate event listener for each element.",
+      "Event delegation is not supported in JavaScript."
+    ]
+  },
+  {
+    "id": 21,
+    "category": "JavaScript",
+    "description": "What is the difference between 'null' and 'undefined' in JavaScript?",
+    "answer": "'null' represents the intentional absence of any object value, while 'undefined' indicates a variable that has been declared but has not been assigned a value.",
+    "wrongAnswers": [
+      "'null' and 'undefined' are interchangeable.",
+      "'null' and 'undefined' have the same meaning in JavaScript.",
+      "'undefined' represents an intentional absence of a value."
+    ]
+  },
+  {
+    "id": 22,
+    "category": "JavaScript",
+    "description": "Explain the concept of the event loop in JavaScript.",
+    "answer": "The event loop is a mechanism in JavaScript that handles asynchronous operations by continuously checking the call stack and the task queue.",
+    "wrongAnswers": [
+      "The event loop is responsible for synchronous operations only.",
+      "The event loop is part of the browser's rendering engine.",
+      "The event loop handles tasks in a sequential order."
+    ]
+  },
+  {
+    "id": 23,
+    "category": "JavaScript",
+    "description": "What are the uses of closures in JavaScript?",
+    "answer": "Closures are often used to create private variables and functions, encapsulate functionality, and maintain state in JavaScript.",
+    "wrongAnswers": [
+      "Closures are not supported in modern JavaScript.",
+      "Closures can only be used in arrow functions.",
+      "Closures are used for controlling browser events."
+    ]
+  },
+  {
+    "id": 24,
+    "category": "JavaScript",
+    "description": "What is the 'prototype' property in JavaScript?",
+    "answer": "The 'prototype' property allows the addition of new properties and methods to existing object constructors in JavaScript.",
+    "wrongAnswers": [
+      "The 'prototype' property is specific to instances, not constructors.",
+      "The 'prototype' property is used for inheritance in JavaScript.",
+      "The 'prototype' property is immutable in JavaScript."
+    ]
+  },
+  {
+    "id": 25,
+    "category": "JavaScript",
+    "description": "Explain the use of 'async' and 'await' in JavaScript.",
+    "answer": "'async' functions in JavaScript enable the use of 'await' to pause the execution of the function until an asynchronous operation is completed, allowing asynchronous code to be written in a synchronous manner.",
+    "wrongAnswers": [
+      "'async' and 'await' are interchangeable keywords.",
+      "'async' and 'await' are not supported in modern JavaScript.",
+      "'async' functions can't contain asynchronous operations."
+    ]
+  },
+  {
+    "id": 26,
+    "category": "JavaScript",
+    "description": "What is the purpose of the 'fetch' API in JavaScript?",
+    "answer": "The 'fetch' API is used to make network requests, specifically HTTP requests, in JavaScript, providing a modern alternative to XMLHttpRequest.",
+    "wrongAnswers": [
+      "The 'fetch' API is used for local file operations.",
+      "The 'fetch' API is specific to server-side scripting only.",
+      "The 'fetch' API does not support asynchronous operations."
+    ]
+  },
+  {
+    "id": 27,
+    "category": "JavaScript",
+    "description": "What is memoization in JavaScript?",
+    "answer": "Memoization is an optimization technique used to cache the results of expensive function calls and return the cached result when the same inputs occur again.",
+    "wrongAnswers": [
+      "Memoization only works with synchronous functions.",
+      "Memoization is not applicable to recursive functions.",
+      "Memoization is a replacement for regular caching techniques."
+    ]
+  },
+  {
+    "id": 28,
+    "category": "JavaScript",
+    "description": "What is the purpose of the 'spread' operator in JavaScript?",
+    "answer": "The 'spread' operator (...) is used to expand iterable objects such as arrays and objects into individual elements or properties.",
+    "wrongAnswers": [
+      "The 'spread' operator can only be used with arrays.",
+      "The 'spread' operator has no effect on object properties.",
+      "The 'spread' operator is used to concatenate strings."
+    ]
+  },
+  {
+    "id": 29,
+    "category": "JavaScript",
+    "description": "Explain the concept of currying in JavaScript.",
+    "answer": "Currying is the process of converting a function with multiple arguments into a sequence of functions that each take a single argument.",
+    "wrongAnswers": [
+      "Currying is used for object serialization.",
+      "Currying doesn't involve transforming functions.",
+      "Currying can only be applied to built-in JavaScript methods."
+    ]
+  },
+  {
+    "id": 30,
+    "category": "JavaScript",
+    "description": "What is the role of the 'Promise.all()' method in JavaScript?",
+    "answer": "'Promise.all()' method takes an array of promises as input and returns a single promise that resolves when all promises in the array have resolved or any one of them rejects.",
+    "wrongAnswers": [
+      "'Promise.all()' method only handles one promise at a time.",
+      "'Promise.all()' method only works with asynchronous functions.",
+      "'Promise.all()' method cannot handle rejections in the array of promises."
     ]
   }
 ]
