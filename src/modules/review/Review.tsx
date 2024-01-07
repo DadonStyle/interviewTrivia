@@ -1,19 +1,17 @@
 import { Box, Typography } from "@mui/material";
-import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { useScore } from "../../contexts/ScoreContext";
+import useTimeout from "../../hooks/useTimeout";
 
 const Review = () => {
   const navigate = useNavigate();
-  const { score, setScore } = useScore();
+  const { score } = useScore();
 
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      navigate("/");
-    }, 4000);
+  const handleNavigate = () => {
+    navigate("/");
+  };
 
-    return () => clearTimeout(timer);
-  }, [setScore, navigate]);
+  useTimeout(1, handleNavigate);
 
   return (
     <Box>
