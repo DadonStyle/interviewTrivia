@@ -21,9 +21,9 @@ const Categories = () => {
   const handleOnCategoryClick = (category: string) => () => {
     if (category === "Random") {
       setSelectedCategory(categories[randomVal(categories.length - 1)]);
-    } else {
-      setSelectedCategory(category);
+      return;
     }
+    setSelectedCategory(category);
   };
 
   return (
