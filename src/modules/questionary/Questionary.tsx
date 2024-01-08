@@ -20,7 +20,7 @@ interface QuestionaryProps {
 const Questionary = ({ questions }: QuestionaryProps) => {
   const navigate = useNavigate();
   const [questionIndex, setQuestionIndex] = useState<number>(0);
-  const [isAnySelected, setIsAnySelected] = useState(false);
+  const [isAnySelected, setIsAnySelected] = useState<boolean>(false);
   const [options, setOptions] = useState(prepSelection(questions[0]));
 
   const handleNextQuestion = () => {
