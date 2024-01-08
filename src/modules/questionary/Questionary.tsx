@@ -4,10 +4,9 @@ import Typography from "@mui/material/Typography";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { getShuffledQuestions, prepSelection } from "../../utils/util";
-
 import Question from "../question/Question";
-import "./Questionary.scss";
 import { QuestionType } from "../../constants/types";
+import "./Questionary.scss";
 
 const QuestionaryContainer = () => {
   const questions = getShuffledQuestions();
@@ -21,7 +20,7 @@ interface QuestionaryProps {
 const Questionary = ({ questions }: QuestionaryProps) => {
   const navigate = useNavigate();
   const [questionIndex, setQuestionIndex] = useState<number>(0);
-  const [isSelected, setIsSelected] = useState(false);
+  const [isAnySelected, setIsAnySelected] = useState(false);
   const [options, setOptions] = useState(prepSelection(questions[0]));
 
   const handleNextQuestion = () => {
@@ -30,7 +29,7 @@ const Questionary = ({ questions }: QuestionaryProps) => {
       setQuestionIndex((prevIndex) => {
         const newIndex = prevIndex + 1;
         setOptions(prepSelection(questions[newIndex]));
-        setIsSelected(false);
+        setIsAnySelected(false);
         return newIndex;
       });
     }
@@ -39,25 +38,20 @@ const Questionary = ({ questions }: QuestionaryProps) => {
   return (
     <Box className="question-section">
       <Box className="question-header">
-        <Typography sx={{ color: "#A76AE4" }} variant="h3">
-          Question
-        </Typography>
-        <Typography paragraph>
-          {questions[questionIndex].description}
-        </Typography>
+        <Typography variant="h3">Question</Typography>
+        <Typography paragraph>{questions[questionIndex].description}</Typography>
       </Box>
-      <Box className="question-container">
-        <Question
-          options={options}
-          correctAnswer={questions[questionIndex].answer}
-          setIsSelected={setIsSelected}
-        />
-      </Box>
+      <Question
+        options={options}
+        correctAnswer={questions[questionIndex].answer}
+        setIsAnySelected={setIsAnySelected}
+        isAnySelected={isAnySelected}
+      />
       <Button
         className="submit-button"
         type="submit"
         variant="contained"
-        // disabled={!isSelected}
+        disabled={!isAnySelected}
         onClick={handleNextQuestion}
       >
         Next

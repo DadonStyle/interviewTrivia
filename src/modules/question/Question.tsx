@@ -1,20 +1,23 @@
-import Box from "@mui/material/Box";
-import Button from "@mui/material/Button";
 import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
+import OptionButton from "../../components/OptionButton/OptionButton";
 import "./Question.scss";
-
-import { indexToAlpha } from "../../utils/util";
 
 interface QuestionPropTypes {
   options: string[];
   correctAnswer: string;
-  setIsSelected: (item: boolean) => void;
+  setIsAnySelected: (item: boolean) => void;
+  isAnySelected: boolean;
 }
 
-const Question = ({ options, correctAnswer, setIsSelected }: QuestionPropTypes) => {
-  const handleOptionSelection = (option: string) => {
-    setIsSelected(true);
+const Question = ({
+  options,
+  correctAnswer,
+  setIsAnySelected,
+  isAnySelected,
+}: QuestionPropTypes) => {
+  const handleOptionSelection = (option: string) => () => {
+    setIsAnySelected(true);
     if (option === correctAnswer) {
       console.log("correct answer");
       return;
@@ -23,30 +26,19 @@ const Question = ({ options, correctAnswer, setIsSelected }: QuestionPropTypes) 
   };
 
   return (
-    <Box className="option-list-container">
-      <List>
-        {options.map((option: string, index: number) =>
-          <ListItem key={crypto.randomUUID()}>
-            <Button
-              sx={{
-                "&.Mui-hovered": {
-                  boxShadow: "0px 0px 15px 0px #7188D8",
-                },
-                "&.Mui-selected": {
-                  background: "#7188D8",
-                  borderRadius: "0.875rem",
-                }
-              }}
-              className={`option-list-button ${option === correctAnswer ? "success" : "wrong"}`}
-              variant="contained"
-              onClick={() => handleOptionSelection(option)}
-            >
-              {`${indexToAlpha(index)}. ${option.toLocaleLowerCase()}`}
-            </Button>
-          </ListItem>
-        )}
-      </List>
-    </Box>
+    <List className="option-list">
+      {options.map((option: string, index: number) => (
+        <ListItem className="option-list-item" key={option}>
+          <OptionButton
+            onClick={handleOptionSelection(option)}
+            text={option}
+            index={index}
+            isCorrectAnswer={option === correctAnswer}
+            isAnySelected={isAnySelected}
+          />
+        </ListItem>
+      ))}
+    </List>
   );
 };
 export default Question;

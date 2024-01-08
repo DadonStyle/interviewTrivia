@@ -1,17 +1,6 @@
-.option-list-container {
+.option-list {
   display: inline-flex;
   flex-direction: column;
   align-items: center;
-  gap: 1.5rem;
-
-  .option-list-button {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 0.625rem;
-    width: 100%;
-    border-radius: 0.875rem;
-    background: #FFF;
-    color: #000;
-  }
+  width: 100%;
 }

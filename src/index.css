@@ -30,6 +30,7 @@ body {
   min-width: 320px;
   min-height: 100vh;
   background-color: #d9ecfd;
+  font-family: "Poppins", sans-serif;
 }
 
 h1 {
@@ -47,10 +48,6 @@ button {
   background-color: #1a1a1a;
   cursor: pointer;
   transition: border-color 0.25s;
-}
-
-button:hover {
-  border-color: #646cff;
 }
 
 button:focus,

@@ -21,11 +21,14 @@
 }
 
 .children-container {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
   background-color: transparent;
   z-index: 1;
   padding: 0 1rem;
-  align-self: self-end;
-  margin-bottom: 1rem;
 }
 
 .background-circle-item {

@@ -1,0 +1,50 @@
+.option-list-button {
+  display: flex;
+  width: 100%;
+  gap: 0.5rem;
+  min-height: 90px;
+  color: #000;
+  text-align: left;
+}
+
+.correct.selected {
+  background-color: green !important; // important needed to override in mobile
+  pointer-events: none;
+}
+.correct.selected.clicked {
+  animation: jump 600ms;
+}
+.wrong.selected {
+  background-color: red !important; // important needed to override in mobile
+  pointer-events: none;
+}
+.wrong.selected.clicked {
+  animation: shake 300ms;
+}
+
+@keyframes jump {
+  20% {
+    transform: translateY(6px);
+  }
+  40% {
+    transform: translateY(-2px);
+  }
+  60% {
+    transform: translateY(6px);
+  }
+  80% {
+    transform: translateY(-2px);
+  }
+}
+
+@keyframes shake {
+  25% {
+    transform: translateX(4px);
+  }
+  50% {
+    transform: translateX(-4px);
+  }
+  75% {
+    transform: translateX(4px);
+  }
+}
