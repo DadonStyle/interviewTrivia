@@ -35,7 +35,13 @@ const Background = ({ children, imgSrc }: BackgroundProps) => (
         </CircleGenerator>
       </Box>
       <Box className="background-circle-item">
+        <CircleGenerator size="size110" color="circleLightBlue" />
+      </Box>
+      <Box className="background-circle-item">
         <CircleGenerator size="size52" color="circleLightBlue" />
+      </Box>
+      <Box className="background-circle-item">
+        <CircleGenerator size="size110" color="circleLightBlue" />
       </Box>
     </Box>
     <Box className="children-container">{children}</Box>
