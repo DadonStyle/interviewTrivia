@@ -15,11 +15,11 @@
   animation: jump 600ms;
 }
 .wrong.selected {
-  background-color: red !important; // important needed to override in mobile
   pointer-events: none;
 }
 .wrong.selected.clicked {
   animation: shake 300ms;
+  background-color: red !important; // important needed to override in mobile
 }
 
 @keyframes jump {
