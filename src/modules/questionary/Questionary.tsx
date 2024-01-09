@@ -3,12 +3,10 @@ import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { useScore } from "../../contexts/ScoreContext";
-import { getShuffledQuestions } from "../../utils/util";
-
+import { getShuffledQuestions, prepSelection } from "../../utils/util";
 import Question from "../question/Question";
-import "./Questionary.scss";
 import { QuestionType } from "../../constants/types";
+import "./Questionary.scss";
 
 const QuestionaryContainer = () => {
   const questions = getShuffledQuestions();
@@ -20,40 +18,46 @@ interface QuestionaryProps {
 }
 
 const Questionary = ({ questions }: QuestionaryProps) => {
-  const [questionIndex, setQuestionIndex] = useState(0);
   const navigate = useNavigate();
-  const { score, setScore } = useScore();
-  const [selectedOption, setSelectedOption] = useState<string>("");
+  const [questionIndex, setQuestionIndex] = useState<number>(0);
+  const [isAnySelected, setIsAnySelected] = useState<boolean>(false);
+  const [options, setOptions] = useState(prepSelection(questions[0]));
 
-  const onOptionSelect = (selectedOption: string) => {
-    setSelectedOption(selectedOption);
-  };
-
-  const handleSubmit = () => {
-    if (!selectedOption) return;
-    if (questionIndex > questions.length) navigate("/review");
-
-    if (questions[questionIndex].answer === selectedOption) {
-      setScore((prevScore) => prevScore + 1);
-    } else {
-      setScore((prevScore) => prevScore - 1);
+  const handleNextQuestion = () => {
+    if (questionIndex >= questions.length - 1) navigate("/review");
+    else {
+      setQuestionIndex((prevIndex) => {
+        const newIndex = prevIndex + 1;
+        setOptions(prepSelection(questions[newIndex]));
+        setIsAnySelected(false);
+        return newIndex;
+      });
     }
-
-    setSelectedOption("");
-    setQuestionIndex((prevIndex) => prevIndex + 1);
   };
 
   return (
-    <Box className="questionary-container">
-      <Typography sx={{ color: "#A76AE4" }} variant="h3">
-        Question
-      </Typography>
-      <Typography paragraph>
-        Score: {score}
-      </Typography>
-      <Question question={questions[questionIndex]} onOptionSelect={onOptionSelect} />
-      <Button type="submit" onClick={handleSubmit}>Next</Button>
-    </Box>);
+    <Box className="question-section">
+      <Box className="question-header">
+        <Typography variant="h3">Question</Typography>
+        <Typography paragraph>{questions[questionIndex].description}</Typography>
+      </Box>
+      <Question
+        options={options}
+        correctAnswer={questions[questionIndex].answer}
+        setIsAnySelected={setIsAnySelected}
+        isAnySelected={isAnySelected}
+      />
+      <Button
+        className="submit-button"
+        type="submit"
+        variant="contained"
+        disabled={!isAnySelected}
+        onClick={handleNextQuestion}
+      >
+        Next
+      </Button>
+    </Box>
+  );
 };
 
 export default QuestionaryContainer;

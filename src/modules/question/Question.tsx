@@ -1,41 +1,44 @@
-import Box from "@mui/material/Box";
-import Typography from "@mui/material/Typography";
-import Button from "@mui/material/Button";
 import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
-import { QuestionType } from "../../constants/types";
-import "../questionary/Questionary.scss";
-
-import { indexToAlpha, prepSelection } from "../../utils/util";
+import OptionButton from "../../components/OptionButton/OptionButton";
+import "./Question.scss";
 
 interface QuestionPropTypes {
-  question: QuestionType;
-  onOptionSelect: (selectedOption: string) => void;
+  options: string[];
+  correctAnswer: string;
+  setIsAnySelected: (item: boolean) => void;
+  isAnySelected: boolean;
 }
 
-const Question = ({ question, onOptionSelect }: QuestionPropTypes) => {
-  const options = prepSelection(question);
+const Question = ({
+  options,
+  correctAnswer,
+  setIsAnySelected,
+  isAnySelected,
+}: QuestionPropTypes) => {
+  const handleOptionSelection = (option: string) => () => {
+    setIsAnySelected(true);
+    if (option === correctAnswer) {
+      console.log("correct answer");
+      return;
+    }
+    console.log("wrong answer");
+  };
+
   return (
-    <Box>
-      <Typography paragraph>
-        {question.description}
-      </Typography>
-      <Box className="option-list-container">
-        <List>
-          {options.map((option: string, index: number) =>
-            <ListItem key={crypto.randomUUID()}>
-              <Button
-                className="option-list-button"
-                variant="contained"
-                onClick={() => onOptionSelect(option)}
-              >
-                {`${indexToAlpha(index)}. ${option}`}
-              </Button>
-            </ListItem>
-          )}
-        </List>
-      </Box>
-    </Box>
+    <List className="option-list">
+      {options.map((option: string, index: number) => (
+        <ListItem className="option-list-item" key={option}>
+          <OptionButton
+            onClick={handleOptionSelection(option)}
+            text={option}
+            index={index}
+            isCorrectAnswer={option === correctAnswer}
+            isAnySelected={isAnySelected}
+          />
+        </ListItem>
+      ))}
+    </List>
   );
 };
 export default Question;
