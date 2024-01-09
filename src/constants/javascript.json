@@ -3,7 +3,7 @@
     "id": 1,
     "category": "JavaScript",
     "description": "What is JavaScript?",
-    "answer": "JavaScript is a scripting language used for creating interactive and dynamic web content.",
+    "answer": "JavaScript is a scripting language.",
     "wrongAnswers": [
       "JavaScript is a server-side programming language.",
       "JavaScript is used only for styling web pages.",
@@ -14,32 +14,32 @@
     "id": 2,
     "category": "JavaScript",
     "description": "What are the differences between 'let', 'const', and 'var' in JavaScript?",
-    "answer": "'let' and 'const' are block-scoped whereas 'var' is function-scoped. 'const' declares a constant value that cannot be reassigned, while 'let' and 'var' can be reassigned.",
+    "answer": "'let' and 'const' are block-scoped whereas 'var' is function-scoped.",
     "wrongAnswers": [
       "'let' and 'const' are used for defining functions.",
       "'let', 'const', and 'var' are interchangeable in JavaScript.",
-      "'var' is block-scoped."
+      "'let' and 'const' are block-scoped whereas 'var' is block-scoped."
     ]
   },
   {
     "id": 3,
     "category": "JavaScript",
     "description": "What is the difference between '=='' and '===' in JavaScript?",
-    "answer": "'==' checks for equality after type coercion, while '===' checks for equality without type coercion (strict equality).",
+    "answer": "'==' checks for equality, while '===' checks for equality and match types.",
     "wrongAnswers": [
       "'==' and '===' are interchangeable.",
       "'==' and '===' perform the same operations.",
-      "'===' performs type coercion."
+      "'===' performs type correction while '==' only compare equality."
     ]
   },
   {
     "id": 4,
     "category": "JavaScript",
     "description": "Explain the concept of closures in JavaScript.",
-    "answer": "Closures are functions that have access to their own scope, as well as the scope in which they were created.",
+    "answer": "Closures are functions that have access to their own scope, and outer scope",
     "wrongAnswers": [
       "Closures are only used for arithmetic operations.",
-      "Closures are not supported in JavaScript.",
+      "Closures are not supported in JavaScript ECMA6 and beyond.",
       "Closures cannot access variables from their parent scope."
     ]
   },
