@@ -5,6 +5,7 @@ import { useState } from "react";
 import { getShuffledQuestions, prepSelection } from "../../utils/util";
 import Question from "../question/Question";
 import { QuestionType } from "../../constants/types";
+import Streak from "../../components/Streak/Streak";
 import "./Questionary.scss";
 
 const QuestionaryContainer = () => {
@@ -20,6 +21,7 @@ const Questionary = ({ questions }: QuestionaryProps) => {
   const [questionIndex, setQuestionIndex] = useState<number>(0);
   const [isAnySelected, setIsAnySelected] = useState<boolean>(false);
   const [options, setOptions] = useState(prepSelection(questions[0]));
+  const [streak, setStreak] = useState<number>(0);
 
   const handleNextQuestion = () => {
     setIsAnySelected(false);
@@ -31,8 +33,20 @@ const Questionary = ({ questions }: QuestionaryProps) => {
     });
   };
 
+  const handleOptionSelection = (option: string) => () => {
+    setIsAnySelected(true);
+    if (option === questions[questionIndex].answer) {
+      setStreak((prev) => prev + 1);
+      return;
+    }
+    setStreak(0);
+  };
+
   return (
     <Box className="question-section">
+      <Box>
+        <Streak streak={streak} />
+      </Box>
       <Box className="question-header">
         <Typography variant="h3">Question</Typography>
         <Typography paragraph>{questions[questionIndex].description}</Typography>
@@ -40,7 +54,7 @@ const Questionary = ({ questions }: QuestionaryProps) => {
       <Question
         options={options}
         correctAnswer={questions[questionIndex].answer}
-        setIsAnySelected={setIsAnySelected}
+        handleOnClick={handleOptionSelection}
         isAnySelected={isAnySelected}
       />
       <Button

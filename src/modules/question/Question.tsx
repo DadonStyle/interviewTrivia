@@ -6,31 +6,17 @@ import "./Question.scss";
 interface QuestionPropTypes {
   options: string[];
   correctAnswer: string;
-  setIsAnySelected: (item: boolean) => void;
+  handleOnClick: (option: string) => () => void;
   isAnySelected: boolean;
 }
 
-const Question = ({
-  options,
-  correctAnswer,
-  setIsAnySelected,
-  isAnySelected,
-}: QuestionPropTypes) => {
-  const handleOptionSelection = (option: string) => () => {
-    setIsAnySelected(true);
-    if (option === correctAnswer) {
-      console.log("correct answer");
-      return;
-    }
-    console.log("wrong answer");
-  };
-
+const Question = ({ options, correctAnswer, handleOnClick, isAnySelected }: QuestionPropTypes) => {
   return (
     <List className="option-list">
       {options.map((option: string, index: number) => (
         <ListItem className="option-list-item" key={option}>
           <OptionButton
-            onClick={handleOptionSelection(option)}
+            onClick={handleOnClick(option)}
             text={option}
             index={index}
             isCorrectAnswer={option === correctAnswer}
