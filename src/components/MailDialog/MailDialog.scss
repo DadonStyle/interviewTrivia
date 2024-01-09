@@ -1,8 +1,40 @@
 .mail-container {
+  border-radius: 20px;
   .mail-open-button {
-    background-color: #ffffff;
     &:hover {
       color: #ffffff;
     }
+  }
+}
+
+.mail-dialog-inner-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  width: 100%;
+  gap: 2rem;
+  .mail-dialog-big-header {
+    font-size: 32px;
+    font-family: 600;
+  }
+  .mail-dialog-small-header {
+    font-size: 20px;
+    font-family: 400;
+  }
+  .mail-dialog-textarea-container {
+    width: 100%;
+    .mail-dialog-textarea {
+      width: 100%;
+      padding: 1rem;
+      font-size: 16px;
+    }
+  }
+  .mail-dialog-send-btn {
+    padding: 0.5rem 1rem;
+    border-radius: 14px;
+    text-decoration: none;
+    background-color: #a2c5e4;
   }
 }
