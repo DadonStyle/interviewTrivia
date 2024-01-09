@@ -6,6 +6,7 @@ import { getShuffledQuestions, prepSelection } from "../../utils/util";
 import Question from "../question/Question";
 import { QuestionType } from "../../constants/types";
 import Streak from "../../components/Streak/Streak";
+import MailDialog from "../../components/MailDialog/MailDialog";
 import "./Questionary.scss";
 
 const QuestionaryContainer = () => {
@@ -44,28 +45,31 @@ const Questionary = ({ questions }: QuestionaryProps) => {
 
   return (
     <Box className="question-section">
-      <Box>
+      <Box className="question-top-section">
+        <MailDialog />
         <Streak streak={streak} />
       </Box>
-      <Box className="question-header">
-        <Typography variant="h3">Question</Typography>
-        <Typography paragraph>{questions[questionIndex].description}</Typography>
+      <Box className="question-bottom-section">
+        <Box className="question-header">
+          <Typography variant="h3">Question</Typography>
+          <Typography paragraph>{questions[questionIndex].description}</Typography>
+        </Box>
+        <Question
+          options={options}
+          correctAnswer={questions[questionIndex].answer}
+          handleOnClick={handleOptionSelection}
+          isAnySelected={isAnySelected}
+        />
+        <Button
+          className="submit-button"
+          type="submit"
+          variant="contained"
+          disabled={!isAnySelected}
+          onClick={handleNextQuestion}
+        >
+          Next
+        </Button>
       </Box>
-      <Question
-        options={options}
-        correctAnswer={questions[questionIndex].answer}
-        handleOnClick={handleOptionSelection}
-        isAnySelected={isAnySelected}
-      />
-      <Button
-        className="submit-button"
-        type="submit"
-        variant="contained"
-        disabled={!isAnySelected}
-        onClick={handleNextQuestion}
-      >
-        Next
-      </Button>
     </Box>
   );
 };

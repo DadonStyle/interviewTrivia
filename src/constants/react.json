@@ -5,9 +5,9 @@
     "description": "What is React?",
     "answer": "React is a JavaScript library for building user interfaces.",
     "wrongAnswers": [
-      "React is a back-end framework.",
-      "React is primarily used for database management.",
-      "React is a programming language."
+      "React is a JavaScript framework for building user interfaces.",
+      "React is a JavaScript framework for generating new components.",
+      "React is a JavaScript library for tests."
     ]
   },
   {
@@ -224,44 +224,28 @@
     "category": "React",
     "description": "What is the main building block of a React application?",
     "answer": "Component",
-    "wrongAnswers": [
-      "Class",
-      "Script",
-      "Function"
-    ]
+    "wrongAnswers": ["Class", "Script", "Function"]
   },
   {
     "id": 22,
     "category": "React",
     "description": "How do you render content inside a React component?",
     "answer": "With nested components",
-    "wrongAnswers": [
-      "With console.log()",
-      "With <p> tags",
-      "All of the above"
-    ]
+    "wrongAnswers": ["With console.log()", "With <p> tags", "All of the above"]
   },
   {
     "id": 23,
     "category": "React",
     "description": "What is the JSX syntax for a simple text element saying \"Hello World\"?",
     "answer": "<p>Hello World</p>",
-    "wrongAnswers": [
-      "print(\"Hello World\")",
-      "return \"Hello World\"",
-      "<h1>Hello World</h1>"
-    ]
+    "wrongAnswers": ["print(\"Hello World\")", "return \"Hello World\"", "<h1>Hello World</h1>"]
   },
   {
     "id": 24,
     "category": "React",
     "description": "How do you pass data from one React component to another?",
     "answer": "With props",
-    "wrongAnswers": [
-      "With global variables",
-      "With shared functions",
-      "All of the above"
-    ]
+    "wrongAnswers": ["With global variables", "With shared functions", "All of the above"]
   },
   {
     "id": 25,
@@ -279,11 +263,7 @@
     "category": "React",
     "description": "Which lifecycle method is called when a component is first mounted?",
     "answer": "componentDidMount",
-    "wrongAnswers": [
-      "componentWillMount",
-      "render",
-      "constructor"
-    ]
+    "wrongAnswers": ["componentWillMount", "render", "constructor"]
   },
   {
     "id": 27,
@@ -312,11 +292,7 @@
     "category": "React",
     "description": "Which tool is commonly used for state management in large React applications?",
     "answer": "Redux",
-    "wrongAnswers": [
-      "Local Storage",
-      "Cookies",
-      "No additional tool needed for small projects"
-    ]
+    "wrongAnswers": ["Local Storage", "Cookies", "No additional tool needed for small projects"]
   },
   {
     "id": 30,
