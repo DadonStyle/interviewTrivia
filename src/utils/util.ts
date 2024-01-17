@@ -12,8 +12,8 @@ export const shuffle: any = (array: any) => array.sort(() => Math.random() - 0.5
 export const getShuffledQuestions = () => {
   const { category } = useParams<string>();
   if (category?.toLocaleLowerCase() === "react") return shuffle(allQuestions.react);
-  if (category?.toLocaleLowerCase() === "javascript") return shuffle(allQuestions.typescript);
-  if (category?.toLocaleLowerCase() === "typescript") return shuffle(allQuestions.javascript);
+  if (category?.toLocaleLowerCase() === "javascript") return shuffle(allQuestions.javascript);
+  if (category?.toLocaleLowerCase() === "typescript") return shuffle(allQuestions.typescript);
   return [];
 };
 
