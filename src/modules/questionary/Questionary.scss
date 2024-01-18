@@ -12,10 +12,19 @@
   }
   .question-top-section {
     display: flex;
-    flex-direction: row-reverse;
+    flex-direction: row;
     justify-content: space-between;
     gap: 1rem;
     width: 100%;
+    .back-button {
+      color: black;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      &:hover {
+        color: #ffffff;
+      }
+    }
   }
   .question-bottom-section {
     width: 100%;
