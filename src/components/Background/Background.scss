@@ -1,7 +1,7 @@
 .background-wrapper {
   width: 100svw;
-  height: 100svh;
-  overflow: hidden;
+  min-height: 100svh;
+  overflow-x: hidden;
   position: relative;
   background-color: inherit;
   display: flex;
