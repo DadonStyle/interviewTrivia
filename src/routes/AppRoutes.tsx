@@ -1,6 +1,6 @@
 import { Routes, Route } from "react-router-dom";
 import Categories from "../modules/category/Categories";
-import QuestionsContainer from "../modules/questionary/QuestionsContainer";
+import QuestionsContainer from "../modules/QuestionsContainer/QuestionsContainer";
 import TriviaRoute from "./TriviaRoute";
 
 const AppRoutes = () => (

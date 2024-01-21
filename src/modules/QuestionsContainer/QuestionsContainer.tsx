@@ -2,7 +2,7 @@ import { useState } from "react";
 import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
 import { useNavigate } from "react-router-dom";
-import QuestionsHandler from "../question/QuestionsHandler";
+import QuestionsHandler from "../QuestionsHandler/QuestionsHandler";
 import Streak from "../../components/Streak/Streak";
 import MailDialog from "../../components/MailDialog/MailDialog";
 import useGetQuestions from "../../hooks/useGetQuestions";
