@@ -17,10 +17,12 @@ const QuestionsContainer = () => {
   return (
     <Box className="question-section">
       <Box className="question-top-section">
-        <Button className="back-button" onClick={onBackClick}>
-          Back
-        </Button>
-        <MailDialog />
+        <Box className="question-top-left-buttons">
+          <Button className="back-button" onClick={onBackClick}>
+            Back
+          </Button>
+          <MailDialog />
+        </Box>
         <Streak streak={streak} />
       </Box>
       <Box className="question-bottom-section">
