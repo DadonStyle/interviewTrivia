@@ -6,11 +6,11 @@ import jsSvg from "/images/js-svg.svg";
 import tsSvg from "/images/ts-svg.svg";
 import quizSvg from "/images/quiz-svg.svg";
 
-interface AppRouteProps {
+interface TriviaRouteProps {
   children: ReactNode;
 }
 
-const AppRoute = ({ children }: AppRouteProps) => {
+const TriviaRoute = ({ children }: TriviaRouteProps) => {
   const { category } = useParams<string>();
   const handleImg = () => {
     if (category?.toLocaleLowerCase() === "react") return reactSvg;
@@ -22,4 +22,4 @@ const AppRoute = ({ children }: AppRouteProps) => {
   return <Background imgSrc={handleImg()}>{children}</Background>;
 };
 
-export default AppRoute;
+export default TriviaRoute;

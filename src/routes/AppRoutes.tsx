@@ -1,24 +1,24 @@
 import { Routes, Route } from "react-router-dom";
-import Questionary from "../modules/questionary/Questionary";
 import Categories from "../modules/category/Categories";
-import AppRoute from "./AppRoute";
+import QuestionsContainer from "../modules/QuestionsContainer/QuestionsContainer";
+import TriviaRoute from "./TriviaRoute";
 
 const AppRoutes = () => (
   <Routes>
     <Route
       path="/"
       element={
-        <AppRoute>
+        <TriviaRoute>
           <Categories />
-        </AppRoute>
+        </TriviaRoute>
       }
     />
     <Route
       path="/:category"
       element={
-        <AppRoute>
-          <Questionary />
-        </AppRoute>
+        <TriviaRoute>
+          <QuestionsContainer />
+        </TriviaRoute>
       }
     />
   </Routes>

@@ -1,6 +1,8 @@
 .mail-container {
   border-radius: 20px;
   .mail-open-button {
+    color: #324453;
+    color: invert(100%);
     &:hover {
       color: #ffffff;
     }
