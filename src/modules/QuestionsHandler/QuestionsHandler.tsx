@@ -37,7 +37,7 @@ const QuestionsHandler = ({ questions, setStreak }: QuestionsHandlerProps) => {
   };
 
   return (
-    <Box>
+    <Box className="question-handler-container">
       <Box className="question-header">
         <Typography variant="h3">Question</Typography>
         <Typography paragraph>{questions[questionIndex].description}</Typography>
