@@ -25,11 +25,11 @@
     "id": 3,
     "category": "React",
     "description": "What is JSX in React?",
-    "answer": "JSX is a syntax extension for JavaScript which allows mixing HTML with JavaScript.",
+    "answer": "JSX is a syntax extension for JavaScript which allows mixing XML with JavaScript.",
     "wrongAnswers": [
-      "JSX is a separate templating language.",
-      "JSX cannot be used in React.",
-      "JSX is used only for CSS styling."
+      "JSX is a syntax extension for JavaScript which allows mixing CSS with JavaScript.",
+      "JSX is a new way to write JavaScript and its not using vanilla JavaScript.",
+      "JSX is mainly used when writing CSS in React."
     ]
   },
   {
@@ -39,7 +39,7 @@
     "answer": "State is an object that stores component's dynamic data.",
     "wrongAnswers": [
       "State is only used for static data.",
-      "State is used for server-side data.",
+      "State is used for passing data from father to son.",
       "State is only applicable to class components."
     ]
   },
@@ -47,11 +47,11 @@
     "id": 5,
     "category": "React",
     "description": "What is the difference between props and state in React?",
-    "answer": "Props are passed into components and are immutable, while state is managed within the component and can be changed.",
+    "answer": "Props are passed into components, while state is managed within the component.",
     "wrongAnswers": [
       "Props and state are the same thing.",
-      "State cannot be changed.",
-      "Props can only be used in functional components."
+      "State cannot be changed while props can change from within the component.",
+      "Props can only be used in functional components, while state can be used in classes."
     ]
   },
   {
@@ -60,9 +60,9 @@
     "description": "What are React Hooks?",
     "answer": "Hooks are functions that let you use React state and lifecycle features in functional components.",
     "wrongAnswers": [
-      "Hooks are used for styling in React.",
-      "Hooks are only available in class components.",
-      "Hooks are exclusively for server-side operations."
+      "Hooks are functions that let you use React dom manipulations in functional components.",
+      "Hooks are classes that let you use React state and lifecycle features in functional components.",
+      "Hooks are functions that let you use React state and lifecycle features in classes components."
     ]
   },
   {
@@ -71,8 +71,8 @@
     "description": "Explain the concept of virtual DOM in React.",
     "answer": "Virtual DOM is a lightweight copy of the real DOM used for performance optimization in React.",
     "wrongAnswers": [
-      "Virtual DOM is used for creating physical displays.",
-      "Virtual DOM is a replacement for HTML in React.",
+      "Virtual DOM is a lightweight copy of the HTML index file used for performance optimization in React.",
+      "Virtual DOM is a copy of the browser window object used for  optimization in React.",
       "Virtual DOM is only relevant for server-side rendering."
     ]
   },
@@ -82,16 +82,16 @@
     "description": "What are the advantages of using React?",
     "answer": "Advantages include component reusability, virtual DOM for performance, and a declarative approach to building UI.",
     "wrongAnswers": [
-      "React is slower than other frameworks.",
-      "React doesn't support functional programming.",
-      "React doesn't provide any tools for state management."
+      "Advantages include component reusability, real DOM support, and a declarative approach to building UI.",
+      "Advantages include better framework design, real DOM support, and a sufficient routing.",
+      "Advantages include top notch engineers, cool new features, and a very big community."
     ]
   },
   {
     "id": 9,
     "category": "React",
     "description": "What is the purpose of the 'key' attribute in React?",
-    "answer": "The 'key' attribute is used to uniquely identify elements and help React understand which items have changed, been added, or been removed.",
+    "answer": "The 'key' attribute is used to uniquely identify elements.",
     "wrongAnswers": [
       "The 'key' attribute is only used for styling purposes.",
       "The 'key' attribute is not supported in React.",
@@ -102,7 +102,7 @@
     "id": 10,
     "category": "React",
     "description": "How does React handle events?",
-    "answer": "React uses synthetic events that wrap native browser events, providing consistent behavior across different browsers.",
+    "answer": "React uses synthetic events that wrap native browser events.",
     "wrongAnswers": [
       "React doesn't support event handling.",
       "React uses native browser events directly without any abstraction.",
@@ -115,9 +115,9 @@
     "description": "What is the purpose of 'props.children' in React?",
     "answer": "'props.children' allows components to pass children elements directly into their output.",
     "wrongAnswers": [
-      "'props.children' is used for styling components.",
-      "'props.children' is not supported in React.",
-      "'props.children' can only be used with class components."
+      "'props.children' is used for styling components and only in JSX.",
+      "'props.children' helps the developer rendering all the input as one value.",
+      "'props.children' can only be used with class components, not relevant from React 16.8 and beyond."
     ]
   },
   {
@@ -126,9 +126,9 @@
     "description": "What are higher-order components (HOC) in React?",
     "answer": "HOCs are functions that take a component and return a new component with extended functionality.",
     "wrongAnswers": [
-      "HOCs are used for styling in React.",
-      "HOCs are not supported in React.",
-      "HOCs are only applicable to functional components."
+      "HOCs are used for styling in React, mainly used with CSS and special keywords.",
+      "HOCs are components that gets a new function and return the same output quicker.",
+      "HOCs are components that only render if their is a prop change and not state."
     ]
   },
   {
@@ -137,8 +137,8 @@
     "description": "What is conditional rendering in React?",
     "answer": "Conditional rendering is the ability to render different components or elements based on certain conditions.",
     "wrongAnswers": [
-      "Conditional rendering is not possible in React.",
-      "Conditional rendering can only be done with external libraries.",
+      "Conditional rendering is not possible in React this is a trick question.",
+      "Conditional rendering is only when we use the switch keyword.",
       "Conditional rendering is only applicable to class components."
     ]
   },
@@ -148,9 +148,9 @@
     "description": "What is the purpose of 'setState' method in React?",
     "answer": "'setState' is used to update the state of a component and trigger a re-render.",
     "wrongAnswers": [
-      "'setState' is used for fetching data.",
-      "'setState' can only be used in class components.",
-      "'setState' is a built-in JavaScript method."
+      "'setState' is used for fetching data and return a response.",
+      "'setState' can only be used in class components, functional component use ref.",
+      "'setState' is a built-in JavaScript method to update the state."
     ]
   },
   {
@@ -159,9 +159,9 @@
     "description": "What is the significance of React Fragments?",
     "answer": "React Fragments allow grouping multiple elements without adding extra nodes to the DOM.",
     "wrongAnswers": [
-      "React Fragments are used for defining component styles.",
-      "React Fragments are not supported in React.",
-      "React Fragments are similar to HTML elements."
+      "React Fragments are used for defining component styles in the Jsx.",
+      "React Fragments are used to group a lot of elements in one place.",
+      "React Fragments are used to group functions together when called inside the render function."
     ]
   },
   {
@@ -170,53 +170,53 @@
     "description": "Explain the concept of 'controlled' vs 'uncontrolled' components in React.",
     "answer": "'Controlled' components have their value controlled by React, while 'uncontrolled' components manage their own state internally.",
     "wrongAnswers": [
-      "'Controlled' components cannot be used in React.",
+      "'Controlled' components have their value controlled by React, while 'uncontrolled' components are usually class components.",
       "'Controlled' and 'uncontrolled' components are the same thing.",
-      "'Controlled' components manage their own state internally."
+      "'Controlled' components manage their own state internally, while 'uncontrolled' have their value controlled by React."
     ]
   },
   {
     "id": 17,
     "category": "React",
     "description": "What are React Lifecycle Methods?",
-    "answer": "React Lifecycle Methods are special methods that provide different points in the lifecycle of a React component, such as componentDidMount, componentDidUpdate, and componentWillUnmount.",
+    "answer": "React Lifecycle Methods are special methods that provide different points in the lifecycle of a class based React component.",
     "wrongAnswers": [
-      "React Lifecycle Methods are used for defining component styles.",
-      "React doesn't have any lifecycle methods.",
-      "Lifecycle methods can only be used in functional components."
+      "React Lifecycle Methods are special methods that can be used ONLY in functional components.",
+      "React Lifecycle Methods are special methods that provide different points in the lifecycle of a function based React component.",
+      "Lifecycle methods can only be used in functional components and thats why useEffect is so confusing."
     ]
   },
   {
     "id": 18,
     "category": "React",
     "description": "What is the purpose of 'useEffect' hook in React?",
-    "answer": "'useEffect' hook is used to perform side effects in functional components. It's similar to componentDidMount, componentDidUpdate, and componentWillUnmount lifecycle methods in class components.",
+    "answer": "'useEffect' hook is used to perform side effects in functional components.",
     "wrongAnswers": [
-      "'useEffect' hook is not supported in React.",
-      "'useEffect' hook is used for defining component styles.",
-      "'useEffect' hook is only applicable to class components."
+      "'useEffect' hook is a hook that holds the state of the component.",
+      "'useEffect' hook is used for defining component styles and current refs.",
+      "'useEffect' hook is only applicable to class components and today we use lifecycle method."
     ]
   },
   {
     "id": 19,
     "category": "React",
     "description": "Explain the concept of 'lifting state up' in React.",
-    "answer": "'Lifting state up' refers to the process of moving the state from child components to their closest common ancestor or a higher-level component.",
+    "answer": "'Lifting state up' refers to the process of moving the state from child components to their closest common ancestor.",
     "wrongAnswers": [
-      "'Lifting state up' is not a concept in React.",
-      "'Lifting state up' can only be applied to functional components.",
-      "'Lifting state up' means isolating state within each component."
+      "'Lifting state up' is not a concept in React, this is a trick question!.",
+      "'Lifting state up' is when we add the first state to a component.",
+      "'Lifting state up' means isolating state within each component that is up the tree."
     ]
   },
   {
     "id": 20,
     "category": "React",
     "description": "What is the purpose of 'React Router' in React applications?",
-    "answer": "'React Router' is a library that provides routing functionality to enable navigation and multiple views in a single-page React application.",
+    "answer": "'React Router' is a library that provides routing in React application.",
     "wrongAnswers": [
       "'React Router' is used for managing state in React applications.",
       "'React Router' is an alternative to React for building UI.",
-      "'React Router' is only compatible with class components."
+      "'React Router' the name of the native routing in React."
     ]
   },
   {
@@ -231,14 +231,18 @@
     "category": "React",
     "description": "How do you render content inside a React component?",
     "answer": "With nested components",
-    "wrongAnswers": ["With console.log()", "With <p> tags", "All of the above"]
+    "wrongAnswers": ["With console.log()", "With pure html and xml tags", "All of the above"]
   },
   {
     "id": 23,
     "category": "React",
     "description": "What is the JSX syntax for a simple text element saying \"Hello World\"?",
     "answer": "<p>Hello World</p>",
-    "wrongAnswers": ["print(\"Hello World\")", "return \"Hello World\"", "<h1>Hello World</h1>"]
+    "wrongAnswers": [
+      "print(\"Hello World\")",
+      "return \"Hello World\"",
+      "<input>Hello World<input>"
+    ]
   },
   {
     "id": 24,
@@ -261,20 +265,16 @@
   {
     "id": 26,
     "category": "React",
-    "description": "Which lifecycle method is called when a component is first mounted?",
+    "description": "Which lifecycle method is the most similar to useEffect with an empty dependency array?",
     "answer": "componentDidMount",
     "wrongAnswers": ["componentWillMount", "render", "constructor"]
   },
   {
     "id": 27,
     "category": "React",
-    "description": "What is the difference between a class component and a function component in React?",
-    "answer": "Function components are simpler and often better for small tasks.",
-    "wrongAnswers": [
-      "Function components are newer and preferred.",
-      "Class components can have state, function components cannot.",
-      "Both are equally powerful and have their own pros and cons."
-    ]
+    "description": "When does hooks were introduced to React?",
+    "answer": "Version 16.8.",
+    "wrongAnswers": ["Version 16.9.", "Version 17.0.", "Version 16.0."]
   },
   {
     "id": 28,
@@ -290,9 +290,9 @@
   {
     "id": 29,
     "category": "React",
-    "description": "Which tool is commonly used for state management in large React applications?",
+    "description": "Which tool is commonly used for state management in a very large React applications?",
     "answer": "Redux",
-    "wrongAnswers": ["Local Storage", "Cookies", "No additional tool needed for small projects"]
+    "wrongAnswers": ["Local Storage", "Cookies", "Context"]
   },
   {
     "id": 30,
