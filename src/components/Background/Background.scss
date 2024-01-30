@@ -1,7 +1,7 @@
 .background-wrapper {
   width: 100svw;
   height: 1px; // trick to let children inherit height
-  min-height: 100svh;
+  min-height: 100lvh;
   overflow-x: hidden;
   position: relative;
   background-color: inherit;
