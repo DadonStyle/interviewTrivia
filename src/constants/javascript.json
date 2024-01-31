@@ -16,9 +16,9 @@
     "description": "What are the differences between 'let', 'const', and 'var' in JavaScript?",
     "answer": "'let' and 'const' are block-scoped whereas 'var' is function-scoped.",
     "wrongAnswers": [
-      "'let' and 'const' are used for defining functions.",
+      "'let' and 'const' are used for defining functions, while 'var' is used for variables.",
       "'let', 'const', and 'var' are interchangeable in JavaScript.",
-      "'let' and 'const' are block-scoped whereas 'var' is block-scoped."
+      "'let' and 'const' are block-scoped whereas 'var' is also block-scoped."
     ]
   },
   {
@@ -27,7 +27,7 @@
     "description": "What is the difference between '=='' and '===' in JavaScript?",
     "answer": "'==' checks for equality, while '===' checks for equality and match types.",
     "wrongAnswers": [
-      "'==' and '===' are interchangeable.",
+      "'==' match types and check for equality, while '===' checks for equality.",
       "'==' and '===' perform the same operations.",
       "'===' performs type correction while '==' only compare equality."
     ]
@@ -38,20 +38,20 @@
     "description": "Explain the concept of closures in JavaScript.",
     "answer": "Closures are functions that have access to their own scope, and outer scope",
     "wrongAnswers": [
-      "Closures are only used for arithmetic operations.",
-      "Closures are not supported in JavaScript ECMA6 and beyond.",
-      "Closures cannot access variables from their parent scope."
+      "Closures are variables that have access to another variables values.",
+      "Closures are functions that \"close\" data.",
+      "Closures are functions that access variables from any scope."
     ]
   },
   {
     "id": 5,
     "category": "JavaScript",
     "description": "What are arrow functions in JavaScript?",
-    "answer": "Arrow functions are a shorter syntax for writing function expressions and have a lexically scoped 'this'.",
+    "answer": "Arrow functions are a shorter syntax for writing function expressions.",
     "wrongAnswers": [
-      "Arrow functions cannot have parameters.",
-      "Arrow functions have a dynamic 'this'.",
-      "Arrow functions are only supported in Node.js."
+      "Arrow functions are functions that always use global variables.",
+      "Arrow functions have a dynamic 'this' and they are faster than normal functions.",
+      "Arrow functions have built in performance boost hence they are faster than normal functions."
     ]
   },
   {
@@ -60,20 +60,20 @@
     "description": "What is the purpose of 'use strict' in JavaScript?",
     "answer": "'use strict' is a directive that enables strict mode, which catches common coding mistakes and prohibits some unsafe actions.",
     "wrongAnswers": [
-      "'use strict' is used for defining variables.",
-      "'use strict' is not supported in modern browsers.",
-      "'use strict' allows sloppy coding practices."
+      "'use strict' is a directive that enables strict mode, which help identify security and performance issues.",
+      "'use strict' is a directive that enables strict mode, which helps the browser catch errors faster.",
+      "'use strict' allows sloppy coding practices to let the developer code quickly."
     ]
   },
   {
     "id": 7,
     "category": "JavaScript",
     "description": "Explain the difference between 'null' and 'undefined' in JavaScript.",
-    "answer": "'null' represents an intentional absence of any object value, while 'undefined' represents a variable that has been declared but has not been assigned a value.",
+    "answer": "'null' represents the absence of an object value, while 'undefined' represents a variable that has been declared but has not been assigned a value.",
     "wrongAnswers": [
-      "'null' and 'undefined' are identical.",
-      "'null' and 'undefined' are used interchangeably.",
-      "'undefined' represents an intentional absence of a value."
+      "'null' and 'undefined' are identical, null is just newer syntax (ECMA6).",
+      "'null' represents a variable that has been declared but has not been assigned a value, while 'undefined' represents the absence of an object value.",
+      "'undefined' represents that the value is declared but has not been used, while 'null' represents that its already been used"
     ]
   },
   {
@@ -82,9 +82,9 @@
     "description": "What is the purpose of the 'this' keyword in JavaScript?",
     "answer": "The 'this' keyword refers to the object it belongs to, or the context in which it is used.",
     "wrongAnswers": [
-      "'this' is used for defining functions.",
-      "'this' always refers to the global object.",
-      "'this' is not supported in JavaScript."
+      "The 'this' keyword refers to the specific function it belongs to, or the context in which it is used.",
+      "The 'this' keyword refers to the global object it belongs to, or the context in which it is used.",
+      "The 'this' keyword refers to the variable it belongs to, or the context in which it is used."
     ]
   },
   {
@@ -94,8 +94,8 @@
     "answer": "Event bubbling is the process where an event triggered on the innermost element is propagated up to its parent elements. Event capturing is the opposite, where the event is captured at the outermost element and then propagated down to the target element.",
     "wrongAnswers": [
       "Event bubbling and event capturing are the same.",
-      "Event bubbling and event capturing do not exist in JavaScript.",
-      "Event bubbling only occurs in React applications."
+      "Event bubbling is the opposite, where the event is captured at the outermost element and then propagated down to the target element. Event capturing is the opposite, where the event is the process where an event triggered on the innermost element is propagated up to its parent elements.",
+      "Event bubbling only occurs when using synthetic events in React applications."
     ]
   },
   {
@@ -105,19 +105,19 @@
     "answer": "'setTimeout' executes a function once after a specified delay, while 'setInterval' repeatedly executes a function at specified intervals until it is cleared.",
     "wrongAnswers": [
       "'setTimeout' and 'setInterval' perform the same operation.",
-      "'setTimeout' cannot execute functions.",
-      "'setInterval' only executes a function once."
+      "'setTimeout' repeatedly executes a function at specified intervals until it is cleared, while 'setInterval' executes a function once after a specified delay.",
+      "'setInterval' only executes a function once, while'setTimeout' helps measure the time it takes for a function to execute once."
     ]
   },
   {
     "id": 11,
     "category": "JavaScript",
-    "description": "What is the role of 'localStorage' and 'sessionStorage' in JavaScript?",
-    "answer": "'localStorage' and 'sessionStorage' are Web Storage APIs that allow data to be stored and retrieved in the browser. 'localStorage' persists data even after the browser is closed, while 'sessionStorage' stores data for the duration of the page session.",
+    "description": "What is the role of 'localStorage' and'sessionStorage' in JavaScript? (Both are Web APIs)",
+    "answer": "'localStorage' persists data even after the browser is closed, while 'sessionStorage' stores data for the duration of the page session.",
     "wrongAnswers": [
-      "'localStorage' and 'sessionStorage' are used for server-side storage.",
-      "'localStorage' and 'sessionStorage' are obsolete in modern browsers.",
-      "'localStorage' and 'sessionStorage' are identical in functionality."
+      "'localStorage' and 'sessionStorage' are used for server-side storage, one for storing local variables and the other for the rest.",
+      "'localStorage' stores data in the user Ram and 'sessionStorage' stores data in the browser.",
+      "'localStorage' and'sessionStorage' are the same thing that was renamed; from 2018, the new name for 'sessionStorage' is 'localStorage'."
     ]
   },
   {
