@@ -112,7 +112,7 @@
   {
     "id": 11,
     "category": "JavaScript",
-    "description": "What is the role of 'localStorage' and'sessionStorage' in JavaScript? (Both are Web APIs)",
+    "description": "What is the difference between 'localStorage' and 'sessionStorage' in JavaScript?",
     "answer": "'localStorage' persists data even after the browser is closed, while 'sessionStorage' stores data for the duration of the page session.",
     "wrongAnswers": [
       "'localStorage' and 'sessionStorage' are used for server-side storage, one for storing local variables and the other for the rest.",
