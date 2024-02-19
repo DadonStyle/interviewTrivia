@@ -139,7 +139,7 @@
     "wrongAnswers": [
       "The 'map' method modifies the original array than returns a new copy of it.",
       "The 'map' method adds a key value pair to the array.",
-      "The 'map' method only works on strings."
+      "The 'map' method only works on strings and functions."
     ]
   },
   {
