@@ -37,6 +37,10 @@
     padding: 0.5rem 1rem;
     border-radius: 14px;
     text-decoration: none;
-    background-color: #a2c5e4;
+    background-color: #a2aee4;
+    color: white;
+    &:hover {
+      color: black;
+    }
   }
 }

@@ -112,7 +112,7 @@
   {
     "id": 11,
     "category": "JavaScript",
-    "description": "What is the role of 'localStorage' and'sessionStorage' in JavaScript? (Both are Web APIs)",
+    "description": "What is the difference between 'localStorage' and 'sessionStorage' in JavaScript?",
     "answer": "'localStorage' persists data even after the browser is closed, while 'sessionStorage' stores data for the duration of the page session.",
     "wrongAnswers": [
       "'localStorage' and 'sessionStorage' are used for server-side storage, one for storing local variables and the other for the rest.",
@@ -123,12 +123,12 @@
   {
     "id": 12,
     "category": "JavaScript",
-    "description": "What are JavaScript promises?",
-    "answer": "Promises are objects used to handle asynchronous operations in JavaScript. They represent a future value or error that will be available at some point.",
+    "description": "What JavaScript promises used for?",
+    "answer": "Promises are used to handle asynchronous operations.",
     "wrongAnswers": [
       "Promises are only used for synchronous operations.",
-      "Promises are not supported in JavaScript.",
-      "Promises can handle only a single asynchronous operation."
+      "Promises are used to handle both asynchronous and asynchronous operations.",
+      "Promises use to handle only a single asynchronous operation at a time."
     ]
   },
   {
@@ -137,9 +137,9 @@
     "description": "What is the purpose of the 'map' method in JavaScript?",
     "answer": "The 'map' method creates a new array by applying a function to each element of an existing array.",
     "wrongAnswers": [
-      "The 'map' method modifies the original array.",
-      "The 'map' method cannot iterate over arrays.",
-      "The 'map' method only works on strings."
+      "The 'map' method modifies the original array than returns a new copy of it.",
+      "The 'map' method adds a key value pair to the array.",
+      "The 'map' method only works on strings and functions."
     ]
   },
   {
