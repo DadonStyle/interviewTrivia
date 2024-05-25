@@ -1,7 +1,7 @@
 import { useState } from "react";
 import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
-import { useNavigate } from "react-router-dom";
+import { Navigate, useNavigate } from "react-router-dom";
 import QuestionsHandler from "../QuestionsHandler/QuestionsHandler";
 import Streak from "../../components/Streak/Streak";
 import MailDialog from "../../components/MailDialog/MailDialog";
@@ -12,13 +12,17 @@ const QuestionsContainer = () => {
   const [streak, setStreak] = useState<number>(0);
   const navigate = useNavigate();
   const { questions } = useGetQuestions();
-  const onBackClick = () => navigate("/");
+  const handleToHomePage = () => navigate("/");
+
+  if (questions && questions.length < 1) {
+    return <Navigate to="/" />;
+  }
 
   return (
     <Box className="question-section">
       <Box className="question-top-section">
         <Box className="question-top-left-buttons">
-          <Button className="back-button" onClick={onBackClick}>
+          <Button className="back-button" onClick={handleToHomePage}>
             Back
           </Button>
           <MailDialog />

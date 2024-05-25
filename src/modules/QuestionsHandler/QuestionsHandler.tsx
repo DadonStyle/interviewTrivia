@@ -4,13 +4,18 @@ import ListItem from "@mui/material/ListItem";
 import { Box, Button, Typography } from "@mui/material";
 import OptionButton from "../../components/OptionButton/OptionButton";
 import { QuestionType } from "../../constants/types";
-import { prepSelection } from "../../utils/util";
+import { shuffle } from "../../utils/util";
 import "./QuestionsHandler.scss";
 
 interface QuestionsHandlerProps {
   questions: QuestionType[];
   setStreak: Dispatch<SetStateAction<number>>;
 }
+
+const prepSelection = (question: QuestionType) => {
+  const allOptions = [question.answer, ...question.wrongAnswers];
+  return shuffle(allOptions);
+};
 
 const QuestionsHandler = ({ questions, setStreak }: QuestionsHandlerProps) => {
   const [options, setOptions] = useState(prepSelection(questions[0]));
