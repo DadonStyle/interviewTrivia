@@ -1,5 +1,5 @@
 import { Routes, Route } from "react-router-dom";
-import Categories from "../modules/category/Categories";
+import Categories from "../modules/Categories/Categories";
 import QuestionsContainer from "../modules/QuestionsContainer/QuestionsContainer";
 import TriviaRoute from "./TriviaRoute";
 
