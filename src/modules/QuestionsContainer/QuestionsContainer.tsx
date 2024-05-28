@@ -6,19 +6,18 @@ import QuestionsHandler from "../QuestionsHandler/QuestionsHandler";
 import Streak from "../../components/Streak/Streak";
 import MailDialog from "../../components/MailDialog/MailDialog";
 import useChatQuestions from "../../hooks/useChatQuestions";
+import { CircularProgress } from "@mui/material";
 import "./QuestionsContainer.scss";
 
 const QuestionsContainer = () => {
   const [streak, setStreak] = useState<number>(0);
-  const { question, getQuestion } = useChatQuestions();
+  const { question, getQuestion, isFetching } = useChatQuestions();
   const navigate = useNavigate();
-  // const { questions } = useGetQuestions();
   const handleToHomePage = () => navigate("/");
 
-  if (!question) {
-    return <></>;
+  if (!question && !isFetching) {
+    return <>Error</>;
   }
-  //<Navigate to="/" />;
 
   return (
     <Box className="question-section">
@@ -32,8 +31,20 @@ const QuestionsContainer = () => {
         <Streak streak={streak} />
       </Box>
       <Box className="question-bottom-section">
-        {question && (
-          <QuestionsHandler question={question} setStreak={setStreak} nextQuestion={getQuestion} />
+        {isFetching ? (
+          <Box sx={{ height: "480px" }}>
+            <CircularProgress size={80} color="primary" />
+          </Box>
+        ) : (
+          <>
+            {question && (
+              <QuestionsHandler
+                question={question}
+                setStreak={setStreak}
+                nextQuestion={getQuestion}
+              />
+            )}
+          </>
         )}
       </Box>
     </Box>
