@@ -1,5 +1,4 @@
 import { PropsWithChildren } from "react";
-
 import Box from "@mui/material/Box";
 import CircleGenerator from "../CircleGenerator/CircleGenerator";
 import "./Background.scss";
