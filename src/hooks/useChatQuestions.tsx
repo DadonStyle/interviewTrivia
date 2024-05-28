@@ -1,28 +1,22 @@
-import { useEffect, useState } from "react";
 import OpenAI from "openai";
-import { QuestionType } from "../constants/types";
 import { useParams } from "react-router";
 import { shuffle } from "../utils/util";
 import allQuestions from "../constants/questions";
+import { useQuery } from "@tanstack/react-query";
 
 type allQuestionsOptionType = keyof typeof allQuestions;
 
 const useChatQuestions = () => {
-  const [question, setQuestion] = useState<QuestionType | null>(null);
   const { category } = useParams();
   const openai = new OpenAI({
     apiKey: import.meta.env.VITE_OPEN_AI_KEY,
-    dangerouslyAllowBrowser: true,
+    dangerouslyAllowBrowser: true, // temp until BE will be live
   });
 
-  useEffect(() => {
-    if (question !== null) return;
-    callApi();
-  }, []);
-
-  const getQuestion = () => {
-    callApi();
-  };
+  const { isFetching, data, refetch } = useQuery({
+    queryKey: ["chatResponse"],
+    queryFn: () => callApi(),
+  });
 
   const callApi = async () => {
     if (!category) return;
@@ -43,17 +37,15 @@ const useChatQuestions = () => {
       ],
       model: "gpt-3.5-turbo",
     });
-    console.log(reactAdditionalQuery);
+
     let nextQuestion = JSON.parse(completion.choices[0].message.content!);
     if (!nextQuestion) {
       nextQuestion = shuffle(allQuestions[category as allQuestionsOptionType]);
     }
-    console.log(nextQuestion);
-    setQuestion(nextQuestion);
     return nextQuestion;
   };
 
-  return { question, getQuestion };
+  return { question: data, getQuestion: refetch, isFetching };
 };
 
 export default useChatQuestions;
